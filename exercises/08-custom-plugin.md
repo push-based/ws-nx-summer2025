@@ -1,3 +1,9 @@
+---
+
+**[← Previous: Enforce Module Boundaries](./07-enforce-module-boundaries.md) | [Next: Custom Executor →](./09-custom-executor.md)**
+
+---
+
 # Exercise: Custom Plugin
 
 Learn how to create a custom executor with Nx for enhancing your project setup. This guide covers generating a plugin, adopting a custom configuration, and executing the executor to streamline development processes.
@@ -37,3 +43,9 @@ nx generate @nx/plugin:plugin workspace-tools --directory=tools/workspace
 </details>
 
 ![image](./images/custom-plugin-directory.png)
+
+---
+
+**[← Previous: Enforce Module Boundaries](./07-enforce-module-boundaries.md) | [Next: Custom Executor →](./09-custom-executor.md)**
+
+---

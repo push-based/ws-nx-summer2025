@@ -1,3 +1,9 @@
+---
+
+**[← Previous: Project Setup](./05-project-setup.md) | [Next: Enforce Module Boundaries →](./07-enforce-module-boundaries.md)**
+
+---
+
 # Exercise: Nx Scalable Architecture Design
 
 In this exercise we will learn how to create scalable architecture design using Nx.
@@ -303,6 +309,12 @@ nx run-many -t lint
 
 - After creating all the libraries, make sure that the application is still working as expected.
 - Run `nx graph` and see how the dependencies are connected between the libraries and the application.
+
+---
+
+**[← Previous: Project Setup](./05-project-setup.md) | [Next: Enforce Module Boundaries →](./07-enforce-module-boundaries.md)**
+
+---
 
 ### 2.1 Create libraries for all things we need
 

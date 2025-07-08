@@ -1,3 +1,9 @@
+---
+
+**[← Previous: Create Libs](./04-create-libs.md) | [Next: Scalable Architecture Design →](./06-scalable-architecture-design.md)**
+
+---
+
 # Exercise: project setup
 
 This exercise is here to make sure your setup is properly configured so that you don't run into any issues
@@ -149,6 +155,12 @@ Open the settings and search for `eslint`, set it up like shown in the following
 Open the settings and search for `prettier`, set it up like shown in the following image:
 
 ![prettier-setup-webstorm.png](./images/prettier-setup-webstorm.png)
+
+---
+
+**[← Previous: Create Libs](./04-create-libs.md) | [Next: Scalable Architecture Design →](./06-scalable-architecture-design.md)**
+
+---
 
 
 

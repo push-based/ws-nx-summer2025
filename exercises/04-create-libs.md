@@ -1,3 +1,9 @@
+---
+
+**[← Previous: Affected & Caching](./03-affected-and-caching.md) | [Next: Project Setup →](./05-project-setup.md)**
+
+---
+
 # Exercise: Create Libs
 
 In this exercise, we will create some libraries that we can use in our application.
@@ -390,3 +396,9 @@ The output should look like this:
 Basically, we can see that the `build` target for the `movies` app depends on the `build` target for the `data` library.
 
 </details>
+
+---
+
+**[← Previous: Affected & Caching](./03-affected-and-caching.md) | [Next: Project Setup →](./05-project-setup.md)**
+
+---

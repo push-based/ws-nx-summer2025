@@ -1,3 +1,9 @@
+---
+
+**[← Previous: Nx Interred Tasks](./11-cristal-plugin.md) | [Next: Connect to Nx Cloud →](./13-connect-to-nx-cloud.md)**
+
+---
+
 # Exercise: Create a branch
 
 ## 0. Setup a new branch & configure `base`
@@ -53,3 +59,9 @@ And also push your changes to the remote.
 ```bash
 git push
 ```
+
+---
+
+**[← Previous: Nx Interred Tasks](./11-cristal-plugin.md) | [Next: Connect to Nx Cloud →](./13-connect-to-nx-cloud.md)**
+
+---

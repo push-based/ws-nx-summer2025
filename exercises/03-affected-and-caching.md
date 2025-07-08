@@ -1,3 +1,9 @@
+---
+
+**[← Previous: Generate an App](./02-generate-an-app.md) | [Next: Create Libs →](./04-create-libs.md)**
+
+---
+
 # Exercise: Affected & Caching
 In this exercise we'll learn how nx improves the way our builds are cached and affected by changes.
 
@@ -224,4 +230,10 @@ We will see that the build process is much faster, because the output of the bui
 </details>
 
 The second build, lint & test will be much faster, because the output of the target is read from the cache.
+
+---
+
+**[← Previous: Generate an App](./02-generate-an-app.md) | [Next: Create Libs →](./04-create-libs.md)**
+
+---
 

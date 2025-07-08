@@ -1,3 +1,9 @@
+---
+
+**[← Previous: Custom Plugin](./08-custom-plugin.md) | [Next: Custom Generator →](./10-custom-generator.md)**
+
+---
+
 # Nx Custom Executor
 
 Learn how to create a custom executor with Nx for enhancing your project setup. 
@@ -308,3 +314,9 @@ npx nx run movies:deploy
 ```
 
 You should see all the outputs from docker as before!
+
+---
+
+**[← Previous: Custom Plugin](./08-custom-plugin.md) | [Next: Custom Generator →](./10-custom-generator.md)**
+
+---

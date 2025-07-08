@@ -1,3 +1,9 @@
+---
+
+**[← Previous: Create Nx Workspace](./01-create-nx-monorepo.md) | [Next: Affected & Caching →](./03-affected-and-caching.md)**
+
+---
+
 # Exercise: Generate an app
 
 In this exercise, we will create a new app to our workspace.
@@ -161,4 +167,8 @@ npx nx g move --destination=apps/movies --projectName=movies --projectNameAndRoo
 
 </details>
 
+---
 
+**[← Previous: Create Nx Workspace](./01-create-nx-monorepo.md) | [Next: Affected & Caching →](./03-affected-and-caching.md)**
+
+---

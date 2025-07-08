@@ -1,3 +1,9 @@
+---
+
+**[← Previous: Create a branch](./12-create-a-branch.md) | [Next: Nx Replay →](./14-distributed-caching.md)**
+
+---
+
 # Exercise: Connect to Nx Cloud
 
 ## 1. connect-to-nx-cloud
@@ -14,3 +20,9 @@ The only thing that you need to do is to put the following accessToken configura
   "nxCloudId": "682dcf0e246aae99cbac4e14"
 }
 ```
+
+---
+
+**[← Previous: Create a branch](./12-create-a-branch.md) | [Next: Nx Replay →](./14-distributed-caching.md)**
+
+---

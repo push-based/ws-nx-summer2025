@@ -1,3 +1,9 @@
+---
+
+**[Next: Generate an App →](./02-generate-an-app.md)**
+
+---
+
 # Exercise: Create Nx Workspace 
 
 In this exercise, we will create a new empty Nx workspace. 
@@ -51,3 +57,9 @@ the folder structure and configuration files. If you have any specific question 
 to the instructor.
 
 We will discuss everything you find in either upcoming exercises or open discussions.
+
+---
+
+**[Next: Generate an App →](./02-generate-an-app.md)**
+
+---
