@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Generate an App](./02-generate-an-app.md) | [Next: Create Libs →](./04-create-libs.md)**
+**[← Previous: Run Tasks and Task Pipelines](./02-task-pipelines.md) | [Next: Create Libs →](./04-create-libs.md)**
 
 ---
 
@@ -233,7 +233,7 @@ The second build, lint & test will be much faster, because the output of the tar
 
 ---
 
-**[← Previous: Generate an App](./02-generate-an-app.md) | [Next: Create Libs →](./04-create-libs.md)**
+**[← Previous: Run Tasks and Task Pipelines](./02-task-pipelines.md) | [Next: Create Libs →](./04-create-libs.md)**
 
 ---
 

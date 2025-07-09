@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Create a branch](./12-create-a-branch.md) | [Next: Nx Replay →](./14-distributed-caching.md)**
+**[← Previous: Create a Branch](./12-create-a-branch.md) | [Next: Distributed Caching →](./14-distributed-caching.md)**
 
 ---
 
@@ -23,6 +23,6 @@ The only thing that you need to do is to put the following accessToken configura
 
 ---
 
-**[← Previous: Create a branch](./12-create-a-branch.md) | [Next: Nx Replay →](./14-distributed-caching.md)**
+**[← Previous: Create a Branch](./12-create-a-branch.md) | [Next: Distributed Caching →](./14-distributed-caching.md)**
 
 ---

@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Nx Interred Tasks](./11-cristal-plugin.md) | [Next: Connect to Nx Cloud →](./13-connect-to-nx-cloud.md)**
+**[← Previous: Crystal Plugin](./11-cristal-plugin.md) | [Next: Connect to Nx Cloud →](./13-connect-to-nx-cloud.md)**
 
 ---
 
@@ -62,6 +62,6 @@ git push
 
 ---
 
-**[← Previous: Nx Interred Tasks](./11-cristal-plugin.md) | [Next: Connect to Nx Cloud →](./13-connect-to-nx-cloud.md)**
+**[← Previous: Crystal Plugin](./11-cristal-plugin.md) | [Next: Connect to Nx Cloud →](./13-connect-to-nx-cloud.md)**
 
 ---

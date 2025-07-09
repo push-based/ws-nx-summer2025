@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Nx Agents & DTE](./16-nx-agents-and-dte.md) | [Next: Initialize Nx →](./18-initialize-nx.md)**
+**[← Previous: Nx Agents & DTE](./16-nx-agents-and-dte.md)**
 
 ---
 
@@ -157,6 +157,6 @@ As always, don't overdo it with the large machines.
 
 ---
 
-**[← Previous: Nx Agents & DTE](./16-nx-agents-and-dte.md) | [Next: Initialize Nx →](./18-initialize-nx.md)**
+**[← Previous: Nx Agents & DTE](./16-nx-agents-and-dte.md)**
 
 ---

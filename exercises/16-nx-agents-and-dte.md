@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Create a simple CI/CD Pipeline](./15-simple-pipeline.md) | [Next: Nx Cloud Agents →](./17-nx-cloud-agents.md)**
+**[← Previous: Simple Pipeline](./15-simple-pipeline.md) | [Next: Nx Cloud Agents →](./17-nx-cloud-agents.md)**
 
 ---
 
@@ -207,7 +207,7 @@ Insert this snippet after the `npx affected` command.
 
 ---
 
-**[← Previous: Create a simple CI/CD Pipeline](./15-simple-pipeline.md) | [Next: Nx Cloud Agents →](./17-nx-cloud-agents.md)**
+**[← Previous: Simple Pipeline](./15-simple-pipeline.md) | [Next: Nx Cloud Agents →](./17-nx-cloud-agents.md)**
 
 ---
 
@@ -373,6 +373,6 @@ jobs:
 
 ---
 
-**[← Previous: Create a simple CI/CD Pipeline](./15-simple-pipeline.md) | [Next: Nx Cloud Agents →](./17-nx-cloud-agents.md)**
+**[← Previous: Simple Pipeline](./15-simple-pipeline.md) | [Next: Nx Cloud Agents →](./17-nx-cloud-agents.md)**
 
 ---

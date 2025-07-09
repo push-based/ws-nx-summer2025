@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Nx Replay](./14-distributed-caching.md) | [Next: Nx Agents & DTE →](./16-nx-agents-and-dte.md)**
+**[← Previous: Distributed Caching](./14-distributed-caching.md) | [Next: Nx Agents & DTE →](./16-nx-agents-and-dte.md)**
 
 ---
 
@@ -179,7 +179,7 @@ Make sure to visit the nx cloud dashboard. It'll tell you about cache hits or mi
 
 ---
 
-**[← Previous: Nx Replay](./14-distributed-caching.md) | [Next: Nx Agents & DTE →](./16-nx-agents-and-dte.md)**
+**[← Previous: Distributed Caching](./14-distributed-caching.md) | [Next: Nx Agents & DTE →](./16-nx-agents-and-dte.md)**
 
 ---
 

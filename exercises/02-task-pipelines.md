@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Initialize Nx](./18-initialize-nx.md)**
+**[← Previous: Initialize Nx](./01-initialize-nx.md) | [Next: Affected & Caching →](./03-affected-and-caching.md)**
 
 ---
 
@@ -18,10 +18,8 @@ Run a task for a specific project:
 
 ```bash
 # Basic syntax: nx [target] [project]
-npx nx build @tuskdesign/zoo
-npx nx serve @tuskdesign/zoo
-npx nx lint @tuskdesign/animals
-npx nx test @tuskdesign/names
+npx nx build animals
+npx nx serve zoo
 ```
 
 ### 1.2 Alternative Command Structure
@@ -30,94 +28,11 @@ You can also use the `run` command with the full target specification:
 
 ```bash
 # Alternative syntax: nx run [project]:[target]
-npx nx run @tuskdesign/zoo:build
-npx nx run @tuskdesign/zoo:serve
-npx nx run @tuskdesign/animals:lint
-npx nx run @tuskdesign/names:test
+npx nx run animals:build
+npx nx run zoo:serve
 ```
 
 Both command structures do the same thing - use whichever feels more natural to you.
-
-## 2. Exploring Common Executors
-
-### 2.1 Build Tasks
-
-Build tasks compile your code and create distributable artifacts:
-
-```bash
-# Build a specific project
-npx nx build @tuskdesign/zoo
-
-# Build all projects
-npx nx run-many -t build
-
-# Build only affected projects
-npx nx affected -t build
-```
-
-**Explore the build output:**
-- After running a build command, check the `dist` folder
-- Notice how TypeScript files are compiled to JavaScript
-- Observe the folder structure in the output
-
-### 2.2 Serve Tasks
-
-Serve tasks start development servers:
-
-```bash
-# Start the development server
-npx nx serve @tuskdesign/zoo
-
-# Alternative syntax
-npx nx run @tuskdesign/zoo:serve
-```
-
-**Understanding serve behavior:**
-- The serve task may depend on the build task
-- Check the terminal output to see what gets executed
-- The server typically runs on `localhost` with a specific port
-
-### 2.3 Lint Tasks
-
-Lint tasks check code quality and style:
-
-```bash
-# Lint a specific project
-npx nx lint @tuskdesign/zoo
-
-# Lint all projects
-npx nx run-many -t lint
-
-# Lint only affected projects
-npx nx affected -t lint
-```
-
-### 2.4 Test Tasks
-
-Test tasks run unit tests:
-
-```bash
-# Run tests for a specific project
-npx nx test @tuskdesign/animals
-
-# Run all tests
-npx nx run-many -t test
-
-# Run tests for affected projects
-npx nx affected -t test
-```
-
-### 2.5 E2E Tasks
-
-End-to-end tests verify the complete application workflow:
-
-```bash
-# Run e2e tests (if configured)
-npx nx e2e your-app-e2e
-
-# Run e2e tests with specific configuration
-npx nx run your-app-e2e:e2e
-```
 
 ## 3. Understanding Task Pipelines
 
@@ -129,7 +44,7 @@ When you run a task, Nx automatically runs its dependencies first:
 
 ```bash
 # This will run build tasks for dependencies first
-npx nx build @tuskdesign/zoo
+npx nx build zoo
 ```
 
 You'll see output like:
@@ -145,10 +60,10 @@ Use the `--graph` flag to see the task dependency graph:
 
 ```bash
 # Show the task graph for a specific target
-npx nx run @tuskdesign/zoo:build --graph
+npx nx run zoo:build --graph
 
 # Show the task graph for serve
-npx nx run @tuskdesign/zoo:serve --graph
+npx nx run zoo:serve --graph
 ```
 
 ### 3.3 Understanding dependsOn Configuration
@@ -273,6 +188,6 @@ The task pipeline system is one of Nx's core features that makes it much easier 
 
 ---
 
-**[← Previous: Initialize Nx](./18-initialize-nx.md)**
+**[← Previous: Initialize Nx](./01-initialize-nx.md) | [Next: Affected & Caching →](./03-affected-and-caching.md)**
 
 ---

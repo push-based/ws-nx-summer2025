@@ -38,9 +38,9 @@ npm run start
 
 ### Day 1
 
-1. [Nx Intro: initialize NX](./exercises/01-create-nx-monorepo.md)
-2. [Nx Intro: Tasks and Task Pipelines](./exercises/02-generate-an-app.md)
-3. [Nx Intro: affected & caching](./exercises/03-affected-and-caching.md)
+1. [Nx Intro: Initialize Nx](./exercises/01-initialize-nx.md)
+2. [Nx Intro: Run Tasks and Task Pipelines](./exercises/02-task-pipelines.md)
+3. [Nx Intro: Affected & Caching](./exercises/03-affected-and-caching.md)
 4. [Nx Intro: Generate Code](./exercises/04-create-libs.md)
 5. [Project Setup](./exercises/05-project-setup.md)
 6. [Scalable Architectures: Design a workspace architecture](./exercises/06-scalable-architecture-design.md)
@@ -58,8 +58,6 @@ npm run start
 4. [Nx Cloud: Dashboard, VCS Integration & Simple CI/CD pipeline](./exercises/15-simple-pipeline.md)
 5. [Nx Cloud: Nx Agents & DTE](./exercises/16-nx-agents-and-dte.md)
 6. [Nx Cloud: Nx Cloud Agents](./exercises/17-nx-cloud-agents.md)
-7. [Initialize Nx](./exercises/18-initialize-nx.md)
-8. [Run Tasks and Task Pipelines](./exercises/19-task-pipelines.md)
 9. [Optimize Caching]()
 10. [Nx Cloud: Atomizer]()
 11. [Nx Cloud: Flaky Tasks]()
