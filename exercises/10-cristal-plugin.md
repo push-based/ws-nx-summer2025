@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Custom Generator](./10-custom-generator.md) | [Next: Create a Branch →](./12-create-a-branch.md)**
+**[← Previous: Custom Generator](./09-custom-generator.md) | [Next: Create a branch →](./11-create-a-branch.md)**
 
 ---
 
@@ -372,6 +372,6 @@ run your inferred task !!!!
 
 ---
 
-**[← Previous: Custom Generator](./10-custom-generator.md) | [Next: Create a Branch →](./12-create-a-branch.md)**
+**[← Previous: Custom Generator](./09-custom-generator.md) | [Next: Create a branch →](./11-create-a-branch.md)**
 
 ---

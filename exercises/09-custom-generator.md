@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Custom Executor](./09-custom-executor.md) | [Next: Crystal Plugin →](./11-cristal-plugin.md)**
+**[← Previous: Custom Executors](./08-custom-executor.md) | [Next: Task Inheritance - Project Crystal →](./10-cristal-plugin.md)**
 
 ---
 
@@ -234,6 +234,6 @@ Congratulations 🎉! You have now created a custom generator that adds a `Docke
 
 ---
 
-**[← Previous: Custom Executor](./09-custom-executor.md) | [Next: Crystal Plugin →](./11-cristal-plugin.md)**
+**[← Previous: Custom Executors](./08-custom-executor.md) | [Next: Task Inheritance - Project Crystal →](./10-cristal-plugin.md)**
 
 ---

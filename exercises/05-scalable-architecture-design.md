@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Project Setup](./05-project-setup.md) | [Next: Enforce Module Boundaries →](./07-enforce-module-boundaries.md)**
+**[← Previous: Project Setup](./04-project-setup.md) | [Next: Module Boundaries →](./06-enforce-module-boundaries.md)**
 
 ---
 
@@ -312,7 +312,7 @@ nx run-many -t lint
 
 ---
 
-**[← Previous: Project Setup](./05-project-setup.md) | [Next: Enforce Module Boundaries →](./07-enforce-module-boundaries.md)**
+**[← Previous: Project Setup](./04-project-setup.md) | [Next: Module Boundaries →](./06-enforce-module-boundaries.md)**
 
 ---
 

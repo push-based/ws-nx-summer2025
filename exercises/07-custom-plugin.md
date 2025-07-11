@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Enforce Module Boundaries](./07-enforce-module-boundaries.md) | [Next: Custom Executor →](./09-custom-executor.md)**
+**[← Previous: Module Boundaries](./06-enforce-module-boundaries.md) | [Next: Custom Executors →](./08-custom-executor.md)**
 
 ---
 
@@ -46,6 +46,6 @@ nx generate @nx/plugin:plugin workspace-tools --directory=tools/workspace
 
 ---
 
-**[← Previous: Enforce Module Boundaries](./07-enforce-module-boundaries.md) | [Next: Custom Executor →](./09-custom-executor.md)**
+**[← Previous: Module Boundaries](./06-enforce-module-boundaries.md) | [Next: Custom Executors →](./08-custom-executor.md)**
 
 ---

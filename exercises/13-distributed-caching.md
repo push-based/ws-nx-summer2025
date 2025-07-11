@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Connect to Nx Cloud](./13-connect-to-nx-cloud.md) | [Next: Simple Pipeline →](./15-simple-pipeline.md)**
+**[← Previous: Connect to Nx Cloud](./12-connect-to-nx-cloud.md) | [Next: Simple CI/CD Pipeline →](./14-simple-pipeline.md)**
 
 ---
 
@@ -69,6 +69,6 @@ Now you all can follow the link and inspect the dashboard :-)
 
 ---
 
-**[← Previous: Connect to Nx Cloud](./13-connect-to-nx-cloud.md) | [Next: Simple Pipeline →](./15-simple-pipeline.md)**
+**[← Previous: Connect to Nx Cloud](./12-connect-to-nx-cloud.md) | [Next: Simple CI/CD Pipeline →](./14-simple-pipeline.md)**
 
 ---

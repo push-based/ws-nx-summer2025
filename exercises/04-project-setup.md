@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Create Libs](./04-create-libs.md) | [Next: Scalable Architecture Design →](./06-scalable-architecture-design.md)**
+**[← Previous: Affected & Caching](./03-affected-and-caching.md) | [Next: Scalable Architecture Design →](./05-scalable-architecture-design.md)**
 
 ---
 
@@ -158,7 +158,7 @@ Open the settings and search for `prettier`, set it up like shown in the followi
 
 ---
 
-**[← Previous: Create Libs](./04-create-libs.md) | [Next: Scalable Architecture Design →](./06-scalable-architecture-design.md)**
+**[← Previous: Affected & Caching](./03-affected-and-caching.md) | [Next: Scalable Architecture Design →](./05-scalable-architecture-design.md)**
 
 ---
 

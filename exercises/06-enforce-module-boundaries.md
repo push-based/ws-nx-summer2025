@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Scalable Architecture Design](./06-scalable-architecture-design.md) | [Next: Custom Plugin →](./08-custom-plugin.md)**
+**[← Previous: Scalable Architecture Design](./05-scalable-architecture-design.md) | [Next: Custom Plugins →](./07-custom-plugin.md)**
 
 ---
 
@@ -222,6 +222,6 @@ Congratulation, you have now enforced dependency constraints for your workspace 
 
 ---
 
-**[← Previous: Scalable Architecture Design](./06-scalable-architecture-design.md) | [Next: Custom Plugin →](./08-custom-plugin.md)**
+**[← Previous: Scalable Architecture Design](./05-scalable-architecture-design.md) | [Next: Custom Plugins →](./07-custom-plugin.md)**
 
 ---

@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Nx Agents & DTE](./16-nx-agents-and-dte.md)**
+**[← Previous: Nx Agents & DTE](./15-nx-agents-and-dte.md)**
 
 ---
 
@@ -157,6 +157,6 @@ As always, don't overdo it with the large machines.
 
 ---
 
-**[← Previous: Nx Agents & DTE](./16-nx-agents-and-dte.md)**
+**[← Previous: Nx Agents & DTE](./15-nx-agents-and-dte.md)**
 
 ---

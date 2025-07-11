@@ -12,24 +12,24 @@ In this exercise, you'll learn how to run various executors including serve, bui
 
 Nx provides multiple ways to run tasks. Let's explore the different command structures and their use cases.
 
-### 1.1 Basic Task Execution
+### 1.1. Basic Task Execution
 
 Run a task for a specific project:
 
 ```bash
 # Basic syntax: nx [target] [project]
-npx nx build animals
-npx nx serve zoo
+nx build animals
+nx serve zoo
 ```
 
-### 1.2 Alternative Command Structure
+### 1.2. Alternative Command Structure
 
 You can also use the `run` command with the full target specification:
 
 ```bash
 # Alternative syntax: nx run [project]:[target]
-npx nx run animals:build
-npx nx run zoo:serve
+nx run animals:build
+nx run zoo:serve
 ```
 
 Both command structures do the same thing - use whichever feels more natural to you.
@@ -38,13 +38,13 @@ Both command structures do the same thing - use whichever feels more natural to 
 
 Task pipelines ensure tasks run in the correct order and handle dependencies automatically.
 
-### 3.1 Automatic Task Dependencies
+### 3.1. Automatic Task Dependencies
 
 When you run a task, Nx automatically runs its dependencies first:
 
 ```bash
 # This will run build tasks for dependencies first
-npx nx build zoo
+nx build zoo
 ```
 
 You'll see output like:
@@ -54,21 +54,45 @@ You'll see output like:
 ✓ nx run @tuskdesign/zoo:build
 ```
 
-### 3.2 Visualizing Task Dependencies
+### 3.2. Understanding dependsOn Configuration
+
+Nx automatically configured this `build` task pipeline for you.  In your `nx.json` file, you'll see this task pipeline configuration:
+
+```json
+{
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    }
+  }
+}
+```
+
+- `"^build"` means "build tasks of dependencies"
+
+### 3.3. Visualizing Task Dependencies
 
 Use the `--graph` flag to see the task dependency graph:
 
 ```bash
 # Show the task graph for a specific target
-npx nx run zoo:build --graph
-
-# Show the task graph for serve
-npx nx run zoo:serve --graph
+nx run zoo:build --graph
 ```
 
-### 3.3 Understanding dependsOn Configuration
+## 4. Create a Task Pipeline
 
-In your `nx.json` file, you'll see task pipeline configuration:
+Delete the `packages/zoo/dist` folder and then serve the `zoo` project.
+
+```bash
+rm -rf ./packages/zoo/dist
+nx serve zoo
+```
+
+You'll see an error because the `serve` task actually depends on the `build` task.  Let's create that dependency so that Nx will automatically run it for us.
+
+### 4.1. Create a Serve Task Pipeline
+
+Update the `nx.json` file to have `serve` depend on `build`
 
 ```json
 {
@@ -83,105 +107,40 @@ In your `nx.json` file, you'll see task pipeline configuration:
 }
 ```
 
-- `"^build"` means "build tasks of dependencies"
-- `"build"` means "build task of the current project"
+In this configuration `"dependsOn": ["build"]` means the task depends on the `build` task of the same project.
 
-## 4. Running Multiple Tasks
+### 4.2. Test the New Pipeline
 
-### 4.1 Run Many Tasks
+Now we can run the `serve` task and Nx will make sure that the `build` task output has been run ahead of time.
+
+```bash
+nx serve zoo
+```
+
+## 5. Running Multiple Tasks
+
+### 5.1. Run Many Tasks
 
 Execute the same task across multiple projects:
 
 ```bash
 # Run build for all projects
-npx nx run-many -t build
+nx run-many -t build
 
 # Run multiple targets
-npx nx run-many -t build,test,lint
+nx run-many -t build,test,lint
 
 # Run tasks for specific projects
-npx nx run-many -t build -p @tuskdesign/zoo,@tuskdesign/animals
+nx run-many -t build -p zoo,animals
 ```
 
-### 4.2 Affected Tasks
-
-Run tasks only for projects affected by your changes:
-
-```bash
-# Run build for affected projects
-npx nx affected -t build
-
-# Run multiple targets for affected projects
-npx nx affected -t build,test,lint
-
-# Compare against a specific base
-npx nx affected -t build --base=main
-```
-
-## 5. Caching and Performance
-
-### 5.1 Understanding Caching
-
-Nx automatically caches task results:
-
-```bash
-# Run build twice - second time should be instant
-npx nx build @tuskdesign/zoo
-npx nx build @tuskdesign/zoo
-```
-
-On the second run, you'll see:
-```
-Nx read the output from the cache instead of running the command for 3 out of 3 tasks.
-```
-
-### 5.2 Cache Information
-
-Use the `--verbose` flag to see more caching details:
-
-```bash
-npx nx build @tuskdesign/zoo --verbose
-```
-
-## 6. Practical Exercises
-
-### 6.1 Build and Serve Workflow
-
-1. Delete the `dist` folder if it exists
-2. Run the serve command and observe what happens
-3. Check if the build runs automatically
-4. Verify the development server starts correctly
-
-### 6.2 Task Pipeline Experimentation
-
-1. Try running different combinations of tasks
-2. Use the `--graph` flag to visualize dependencies
-3. Experiment with the `run-many` and `affected` commands
-4. Observe how caching affects subsequent runs
-
-### 6.3 Command Structure Practice
-
-Practice using both command structures:
-
-```bash
-# Method 1: nx [target] [project]
-npx nx build @tuskdesign/zoo
-
-# Method 2: nx run [project]:[target]
-npx nx run @tuskdesign/zoo:build
-```
-
-Use whichever syntax feels more intuitive to you.
-
-## 7. Understanding the Output
+## 5. Understanding the Output
 
 After completing this exercise, you should understand:
 
 - How to run various types of tasks (build, serve, lint, test, e2e)
-- The difference between the two command syntax options
 - How task pipelines ensure dependencies are built in the correct order
 - How to run tasks across multiple projects efficiently
-- How Nx's caching system improves performance
 - How to visualize task dependencies using the task graph
 
 The task pipeline system is one of Nx's core features that makes it much easier to manage complex build processes in monorepos.

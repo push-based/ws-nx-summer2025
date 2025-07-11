@@ -1,11 +1,12 @@
 ---
 
-**[← Previous: Run Tasks and Task Pipelines](./02-task-pipelines.md) | [Next: Create Libs →](./04-create-libs.md)**
+**[← Previous: Run Tasks and Task Pipelines](./02-task-pipelines.md) | [Next: Project Setup →](./04-project-setup.md)**
 
 ---
 
 # Exercise: Affected & Caching
-In this exercise we'll learn how nx improves the way our builds are cached and affected by changes.
+
+In this exercise we'll learn how Nx improves the performance of your tasks with caching and the affected command.
 
 ## 0. Git commit
 In order to have a clean state, we will need to commit our changes. 
@@ -21,44 +22,27 @@ or just use the IDE to commit the changes.
 
 </details>  
 
-### 0.1 Run `build` for all projects
-In order to see the effect of the changes, we will need to run the `build` target for all projects.
-
-<details>
-  <summary>Run `build` for all projects</summary>
-
-```bash
-npx nx run-many -t=build
-```
-
-The output should look like this:
-
-![run-many-build.png](images/run-many-build.png)
-
-</details>
-
 ## 1. Make changes
 In this part we will make some changes to the code base. And see how the `affected` command works based on where the changes are being made.
 
 ### 1.1 Make change in app
-First, we will make a change in the `movies` app. Go to the `movies/src/app/app.tsx` file and change the `h1` tag to a `h2` tag.
+First, we will make a change in the `names` project. Go to the `packages/names/names.ts` file and change the first name in the `NAMES` list from `Brie` to `Inigo` (or whatever name you want).
 
 <details>
-  <summary>Change `h1` to `h2` in `movies/src/app/app.tsx`</summary>
+  <summary>Change a name in `packages/names/names.ts`</summary>
 
 ```diff
-- <h1 style={{ textAlign: 'center' }}>Welcome movies!</h1>
-+ <h2 style={{ textAlign: 'center' }}>Welcome movies!</h2>
+- "Brie",
++ "Inigo",
 ```
 
 </details>
 
 ### 1.2 Affected
-In this part we will see how the `affected` command works.
-Because we have made a change in the `movies` app, we will see that the `affected` command when we run the build target will only build the `movies` app, and use the build cache for the `data` library because the change didn't affect it.
+In this part we will see how the `affected` command works. Nx's `affected` command saves you from running tasks that are guaranteed to not have their outputs altered by your code changes.  In this case, changes to the `names` project will force you to run tasks for `names` and `zoo`, but the tasks for `animals` don't need to be run.
 
 #### 1.2.1 Affected Project Graph for `build` target
-To see the projects that are affected by the change, run the `affected` command.
+To see the projects that are affected by the change, run the `affected` command with the `--graph` flag.
 
 <details>
   <summary>Run `affected` command</summary>
@@ -233,7 +217,7 @@ The second build, lint & test will be much faster, because the output of the tar
 
 ---
 
-**[← Previous: Run Tasks and Task Pipelines](./02-task-pipelines.md) | [Next: Create Libs →](./04-create-libs.md)**
+**[← Previous: Run Tasks and Task Pipelines](./02-task-pipelines.md) | [Next: Project Setup →](./04-project-setup.md)**
 
 ---
 

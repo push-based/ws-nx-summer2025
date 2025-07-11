@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Crystal Plugin](./11-cristal-plugin.md) | [Next: Connect to Nx Cloud →](./13-connect-to-nx-cloud.md)**
+**[← Previous: Task Inheritance - Project Crystal](./10-cristal-plugin.md) | [Next: Connect to Nx Cloud →](./12-connect-to-nx-cloud.md)**
 
 ---
 
@@ -62,6 +62,6 @@ git push
 
 ---
 
-**[← Previous: Crystal Plugin](./11-cristal-plugin.md) | [Next: Connect to Nx Cloud →](./13-connect-to-nx-cloud.md)**
+**[← Previous: Task Inheritance - Project Crystal](./10-cristal-plugin.md) | [Next: Connect to Nx Cloud →](./12-connect-to-nx-cloud.md)**
 
 ---
