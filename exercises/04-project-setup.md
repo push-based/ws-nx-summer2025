@@ -4,7 +4,7 @@
 
 ---
 
-# Exercise: project setup
+# `📖 Exercise:` project setup
 
 This exercise is here to make sure your setup is properly configured so that you don't run into any issues
 when doing the actual coding exercises.

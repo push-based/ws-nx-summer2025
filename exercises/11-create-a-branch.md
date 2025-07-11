@@ -4,7 +4,7 @@
 
 ---
 
-# Exercise: Create a branch
+# `📖 Exercise:` Create a branch
 
 ## 0. Setup a new branch & configure `base`
 

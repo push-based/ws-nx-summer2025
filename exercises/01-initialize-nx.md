@@ -4,7 +4,7 @@
 
 ---
 
-# Exercise: Initialize Nx
+# `📖 Exercise:` Initialize Nx
 
 In this exercise, you'll learn how to add Nx to an existing TypeScript repository and explore the project graph that Nx constructs from analyzing your codebase.
 

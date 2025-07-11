@@ -4,7 +4,7 @@
 
 ---
 
-# Exercise: Connect to Nx Cloud
+# `📖 Exercise:` Connect to Nx Cloud
 
 ## 1. connect-to-nx-cloud
 

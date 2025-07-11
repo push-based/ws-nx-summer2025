@@ -4,7 +4,7 @@
 
 ---
 
-# Exercise: Affected & Caching
+# `📖 Exercise:` Affected & Caching
 
 In this exercise we'll learn how Nx improves the performance of your tasks with caching and the affected command.
 

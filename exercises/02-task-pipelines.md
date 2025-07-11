@@ -4,7 +4,7 @@
 
 ---
 
-# Exercise: Run Tasks and Task Pipelines
+# `📖 Exercise:` Run Tasks and Task Pipelines
 
 In this exercise, you'll learn how to run various executors including serve, build, lint, test, and e2e commands. You'll also understand command structure variations and explore build outputs and development server functionality.
 

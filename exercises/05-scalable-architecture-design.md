@@ -4,7 +4,7 @@
 
 ---
 
-# Exercise: Nx Scalable Architecture Design
+# `📖 Exercise:` Nx Scalable Architecture Design
 
 In this exercise we will learn how to create scalable architecture design using Nx.
 We will create multiple libraries of all types (feature, data-access, ui, util) and scopes (movies, shared).

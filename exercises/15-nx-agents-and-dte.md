@@ -4,7 +4,7 @@
 
 ---
 
-# Exercise: Nx Agents & DTE
+# `📖 Exercise:` Nx Agents & DTE
 
 In this exercise we'll learn how to use nx agents and distributed task execution.
 
