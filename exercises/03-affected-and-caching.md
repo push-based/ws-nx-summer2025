@@ -15,7 +15,7 @@ In order to have a clean state, we will need to commit our changes.
   <summary>Commit changes</summary>
 
 ```bash
-git commit -a -m "initial monorepo setup"
+git commit -a -m "initial setup"
 ```
 
 or just use the IDE to commit the changes.
@@ -48,7 +48,7 @@ To see the projects that are affected by the change, run the `affected` command 
   <summary>Run `affected` command</summary>
 
 ```bash
-npx nx affected --target build --graph
+nx graph --affected
 ```
 
 The output should look like this:
@@ -59,154 +59,160 @@ The output should look like this:
 </details>
 
 #### 1.2.2 Run `build` for affected projects
-To see the effect of the change, we will need to run the `build` target for the affected projects.
+Now lets run the `build` target for the affected projects.
 
 <details>
   <summary>Run `build` for affected projects</summary>
 
 ```bash
-npx nx affected --target build
+nx affected --target build
 ```
 
 The output should look like this:
 
-![nx-affected-run-build-with-change.png](images/nx-affected-run-build-with-change.png)
+```
+❯ nx affected --target build
 
-We can see that the `data` library was not built (but was retrieved from cache), because we didn't make any changes to it.
+ NX   Affected criteria defaulted to --base=main --head=HEAD
+
+
+
+   ✔  nx run @tuskdesign/animals:build
+   ✔  nx run @tuskdesign/names:build
+   ✔  nx run @tuskdesign/zoo:build
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+ NX   Successfully ran target build for 2 projects and 1 task they depend on (1s)
+
+Nx read the output from the cache instead of running the command for 1 out of 3 tasks.
+```
+
+The affected logic goes through these steps:
+
+1. Nx uses a git diff to identify the `packages/names/names.ts` file as the only changed file.
+2. Nx identifies the file is in the `names` project.
+3. Nx uses the project graph to list all the projects that have the `names` project as a direct or transitive dependency. e.g. `zoo`
+4. Nx runs the `build` task for `zoo` and `names`
+5. Since the `build` task for `zoo` depends on `animals` as well, that task is also run - and replayed from the cache.
 
 </details>
 
-#### 1.2.3 Affected Command (nx affected test)
-Just like the `build` target, we can skip running the tests for the `data` library by using the `affected` command, and running the `test` target for the affected projects, in our case, the `movies` app.
+#### 1.2.3 Affected Command (nx affected typecheck)
+Just like the `build` target, we can skip running the `typecheck` for the `animals` library by using the `affected` command.
 
 <details>
-  <summary>Run `affected` for `test` target</summary>
+  <summary>Run `affected` for `typecheck` target</summary>
 
 ```bash
-npx nx affected --target test
+nx affected --target typecheck
 ```
 
-![nx-affected-test-with-change.png](images/nx-affected-test-with-change.png)
+The results are:
 
-We can see that only the `movies` app was tested.
+```
+❯ nx affected --target typecheck
 
+ NX   Affected criteria defaulted to --base=main --head=HEAD
+
+
+
+   ✔  nx run @tuskdesign/names:typecheck
+   ✔  nx run @tuskdesign/zoo:typecheck
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+ NX   Successfully ran target typecheck for 2 projects (593ms)
+```
 </details>
 
-### 1.3 Make change in the `data` library
-In this part we will make a change in the `data` library.
-
-<details>
-  <summary>Change `data` library code</summary>
-
-Open the `use-fetch-movies.ts` file and add a `console.log` statement to the `fetchMovies` function.
-
-```diff
-const fetchMovies = async () => {
-+  console.log('use-fetch-movies.ts');
-  // ...
-}
-```
-
-</details>
-
-### 1.4 Affected
-Let's see how the `affected` command works when we make a change in a leaf library (the `data` library).
-
-#### 1.4.1 Affected Project Graph
-Run the `affected` command for the `build` target and see the affected projects.
-
-<details>
-  <summary>Run `affected` command for `build`</summary>
-
-```bash
-npx nx affected --target build --graph
-```
-
-The output should look like this:
-![nx-affected-leaf-change.png](images/nx-affected-leaf-change.png)
-
-We can see that both the `data` library and the `movies` app are affected by the change.
-
-</details>
-
-#### 1.4.2 Affected Task Graph
-We saw that for the `build` target, both `movies` and `data` libraries are affected. But, `components` library is affected too when it comes to some other targets, like `test` or `lint`.
-
-<details>
-  <summary>Run `affected` command for `lint`</summary>
-
-```bash
-npx nx affected --target lint --graph
-```
-
-The output should look like this:
-
-![nx-affected-lint-leaf.png](images/nx-affected-lint-leaf.png)
+We can see that only the `zoo` and `names` projects have `typecheck` run.
 
 </details>
 
 ## 2. Local Cache in Action
 In this part we will see how the local cache works and how it affects/optimizes the build process.
 
+To prepare for this section, clear you local cache with the `nx reset` command:
+
+```
+nx reset
+```
+
+You can also skip the cache for a single command using the `--skip-nx-cache` flag.
+
 ### 2.1 Build once
-In this part we will build the `movies` app once.
+In this part we will build the `zoo` project once.
 
 <details>
-  <summary>Build `movies` app once</summary>
+  <summary>Build `zoo` project once</summary>
 
 ```bash
-npx nx build movies
+nx build zoo
 ```
 
 The output should look like this:
 
 ```
-➜  npx nx build movies
-   ✔  1/1 dependent project tasks succeeded [0 read from cache] 
-   Hint: you can run the command with --verbose to see the full dependent project outputs
-———————————————————————————————————————————————————————————
-> nx run movies:build
-> vite build
+❯ nx build zoo
 
-vite v5.4.0 building for production...
-✓ 40 modules transformed.
-......
-✓ built in 535ms
-———————————————————————————————————————————————————————————
- NX   Successfully ran target build for project movies and 1 task it depends on (2s)
+> nx run @tuskdesign/names:build
+
+
+> @tuskdesign/names@1.2.0 build
+> tsc --build tsconfig.lib.json
+
+
+> nx run @tuskdesign/animals:build
+
+
+> @tuskdesign/animals@1.2.0 build
+> tsc --build tsconfig.lib.json
+
+
+> nx run @tuskdesign/zoo:build
+
+
+> @tuskdesign/zoo@1.2.0 build
+> tsc --build tsconfig.lib.json
+
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+ NX   Successfully ran target build for project @tuskdesign/zoo and 2 tasks it depends on (1s)
 ```
 
 </details>
 
 ### 2.2 Build again
-Now that we already built the `movies` app once, let's see how the build process works when we run the `build` target again.
+Now that we already built the `zoo` project once, let's see how the build process works when we run the `build` target again.
 
 <details>
-  <summary>Build `movies` app again</summary>
+  <summary>Build the `zoo` project again</summary>
 
 ```bash
-npx nx build movies
+nx build zoo
 ```
 
 The output should look like this:
 
 ```
-➜  npx nx build movies
-   ✔  1/1 dependent project tasks succeeded [1 read from cache]
-   Hint: you can run the command with --verbose to see the full dependent project outputs
-———————————————————————————————————————————————————————————
-> nx run movies:build  [existing outputs match the cache, left as is]
-> vite build
+❯ nx build zoo
 
-vite v5.4.0 building for production...
-✓ 40 modules transformed.
-......
-✓ built in 535ms
+> nx run @tuskdesign/names:build  [existing outputs match the cache, left as is]
 
-———————————————————————————————————————————————————————————
- NX   Successfully ran target build for project movies and 1 task it depends on (60ms)
- 
-Nx read the output from the cache instead of running the command for 2 out of 2 tasks.
+
+> nx run @tuskdesign/animals:build  [existing outputs match the cache, left as is]
+
+
+> nx run @tuskdesign/zoo:build  [existing outputs match the cache, left as is]
+
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+ NX   Successfully ran target build for project @tuskdesign/zoo and 2 tasks it depends on (162ms)
+
+Nx read the output from the cache instead of running the command for 3 out of 3 tasks.
 ```
 
 We will see that the build process is much faster, because the output of the build is read from the cache.
