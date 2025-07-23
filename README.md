@@ -41,7 +41,7 @@ npm run start
 1. [Nx Intro: Initialize Nx](./exercises/01-initialize-nx.md)
 2. [Nx Intro: Run Tasks and Task Pipelines](./exercises/02-task-pipelines.md)
 3. [Nx Intro: Affected & Caching](./exercises/03-affected-and-caching.md)
-4. [Project Setup](./exercises/04-project-setup.md)
+4. [Movies App Project Setup](./exercises/04-project-setup.md)
 5. [Scalable Architectures: Design a workspace architecture](./exercises/05-scalable-architecture-design.md)
 6. [Module Boundaries](./exercises/06-enforce-module-boundaries.md)
 7. [Extend Nx: Custom Plugins](./exercises/07-custom-plugin.md)
