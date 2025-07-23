@@ -1,4 +1,10 @@
-# Exercise: Nx Cloud Agents
+---
+
+**[← Previous: Nx Agents & DTE](./15-nx-agents-and-dte.md) | [Next: Cache Debugging & Optimization →](./17-caching-deep-dive.md)**
+
+---
+
+# `📖 Exercise:` Nx Cloud Agents
 
 In this exercise we'll learn how to use nx cloud agents and distributed task execution that we do not
 have to maintain ourselves. Instead we can just let nx cloud handle executions for us.
@@ -148,3 +154,9 @@ setup to use.
 Then u point the `--distribute-on=".nx/workflows/dynamic-changesets.yaml"` and you should be good to go.
 
 As always, don't overdo it with the large machines.
+
+---
+
+**[← Previous: Nx Agents & DTE](./15-nx-agents-and-dte.md) | [Next: Cache Debugging & Optimization →](./17-caching-deep-dive.md)**
+
+---

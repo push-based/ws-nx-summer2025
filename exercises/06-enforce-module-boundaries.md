@@ -1,3 +1,9 @@
+---
+
+**[← Previous: Scalable Architecture Design](./05-scalable-architecture-design.md) | [Next: Custom Plugins →](./07-custom-plugin.md)**
+
+---
+
 # Nx Enforce Module Boundaries
 
 In this exercise you'll learn how to enforce architecture constraints. We will use the built-in eslint rule `@nx/enforce-module-boundaries`
@@ -213,3 +219,9 @@ nx affected:lint
 ```
 
 Congratulation, you have now enforced dependency constraints for your workspace architecture!
+
+---
+
+**[← Previous: Scalable Architecture Design](./05-scalable-architecture-design.md) | [Next: Custom Plugins →](./07-custom-plugin.md)**
+
+---

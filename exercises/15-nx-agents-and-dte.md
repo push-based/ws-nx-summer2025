@@ -1,4 +1,10 @@
-# Exercise: Nx Agents & DTE
+---
+
+**[← Previous: Simple CI/CD Pipeline](./14-simple-pipeline.md) | [Next: Nx Cloud Agents →](./16-nx-cloud-agents.md)**
+
+---
+
+# `📖 Exercise:` Nx Agents & DTE
 
 In this exercise we'll learn how to use nx agents and distributed task execution.
 
@@ -199,6 +205,12 @@ Insert this snippet after the `npx affected` command.
         run: npx nx-cloud stop-all-agents
 ```
 
+---
+
+**[← Previous: Simple CI/CD Pipeline](./14-simple-pipeline.md) | [Next: Nx Cloud Agents →](./16-nx-cloud-agents.md)**
+
+---
+
 <details>
   <summary>Full `main` -> coordinator job</summary>
 
@@ -358,3 +370,9 @@ jobs:
         if: ${{ always() }}
         run: npx nx-cloud stop-all-agents
 ```
+
+---
+
+**[← Previous: Simple CI/CD Pipeline](./14-simple-pipeline.md) | [Next: Nx Cloud Agents →](./16-nx-cloud-agents.md)**
+
+---

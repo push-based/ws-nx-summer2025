@@ -1,4 +1,10 @@
-# Exercise: Create a simple CI/CD Pipeline
+---
+
+**[← Previous: Nx Replay](./13-distributed-caching.md) | [Next: Nx Agents & DTE →](./15-nx-agents-and-dte.md)**
+
+---
+
+# `📖 Exercise:` Create a simple CI/CD Pipeline
 
 In this exercise we'll learn how nx improves the way how we write and execute CI/CD pipelines.
 
@@ -170,4 +176,10 @@ Now let's do the same trick, but in vice versa.
 Now you can watch the CI using the cache you have produced locally. It's pure beauty 🤌
 
 Make sure to visit the nx cloud dashboard. It'll tell you about cache hits or misses!
+
+---
+
+**[← Previous: Nx Replay](./13-distributed-caching.md) | [Next: Nx Agents & DTE →](./15-nx-agents-and-dte.md)**
+
+---
 

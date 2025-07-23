@@ -1,4 +1,10 @@
-# Exercise: Create a branch
+---
+
+**[← Previous: Task Inheritance - Project Crystal](./10-cristal-plugin.md) | [Next: Connect to Nx Cloud →](./12-connect-to-nx-cloud.md)**
+
+---
+
+# `📖 Exercise:` Create a branch
 
 ## 0. Setup a new branch & configure `base`
 
@@ -53,3 +59,9 @@ And also push your changes to the remote.
 ```bash
 git push
 ```
+
+---
+
+**[← Previous: Task Inheritance - Project Crystal](./10-cristal-plugin.md) | [Next: Connect to Nx Cloud →](./12-connect-to-nx-cloud.md)**
+
+---

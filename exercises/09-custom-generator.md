@@ -1,3 +1,9 @@
+---
+
+**[← Previous: Custom Executors](./08-custom-executor.md) | [Next: Task Inheritance - Project Crystal →](./10-cristal-plugin.md)**
+
+---
+
 # Nx Custom Generator
 In this exercise, we will create a custom generator which adds a DockerFile to a application.
 
@@ -225,3 +231,9 @@ nx g add-dockerfile
 The generator will ask you for the name of the dockerFile and the project where it should be added. After that, it will create a new `Dockerfile` file in the root of the specified project.
 
 Congratulations 🎉! You have now created a custom generator that adds a `Dockerfile` to a project.
+
+---
+
+**[← Previous: Custom Executors](./08-custom-executor.md) | [Next: Task Inheritance - Project Crystal →](./10-cristal-plugin.md)**
+
+---

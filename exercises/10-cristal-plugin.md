@@ -1,3 +1,9 @@
+---
+
+**[← Previous: Custom Generator](./09-custom-generator.md) | [Next: Create a branch →](./11-create-a-branch.md)**
+
+---
+
 # Nx Interred Tasks
 
 Learn how to create a crystal plugin with Nx.
@@ -363,3 +369,9 @@ npx nx show project movies --web
 # 6. Execute!
 
 run your inferred task !!!!
+
+---
+
+**[← Previous: Custom Generator](./09-custom-generator.md) | [Next: Create a branch →](./11-create-a-branch.md)**
+
+---

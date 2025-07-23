@@ -1,4 +1,10 @@
-# Exercise: Nx Scalable Architecture Design
+---
+
+**[← Previous: Project Setup](./04-project-setup.md) | [Next: Module Boundaries →](./06-enforce-module-boundaries.md)**
+
+---
+
+# `📖 Exercise:` Nx Scalable Architecture Design
 
 In this exercise we will learn how to create scalable architecture design using Nx.
 We will create multiple libraries of all types (feature, data-access, ui, util) and scopes (movies, shared).
@@ -303,6 +309,12 @@ nx run-many -t lint
 
 - After creating all the libraries, make sure that the application is still working as expected.
 - Run `nx graph` and see how the dependencies are connected between the libraries and the application.
+
+---
+
+**[← Previous: Project Setup](./04-project-setup.md) | [Next: Module Boundaries →](./06-enforce-module-boundaries.md)**
+
+---
 
 ### 2.1 Create libraries for all things we need
 
