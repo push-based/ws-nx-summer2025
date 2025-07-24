@@ -10,7 +10,7 @@ In this exercise we'll learn how nx improves the way how we write and execute CI
 
 ## 0. Create a PR on github
 
-Please go to the [repo](https://github.com/push-based/react-movies-app) and create a PR with your changes.
+Please go to the [repo](https://github.com/push-based/ws-nx-summer2025) and create a PR with your changes.
 
 In best case you give it a name that is somehow unique to your name :)
 
@@ -59,7 +59,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 24
           cache: 'npm'
 
       - run: npm ci --force
@@ -97,7 +97,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 24
           cache: 'npm'
 
       - run: npm ci
@@ -170,7 +170,7 @@ You should see that you now get the cached output from distributed cache.
 Now let's do the same trick, but in vice versa.
 
 * Create a change locally
-* warmup the cache by running e.g `nx build movies`
+* warmup the cache by running e.g `npx nx build movies`
 * `git push` your changes
 
 Now you can watch the CI using the cache you have produced locally. It's pure beauty 🤌

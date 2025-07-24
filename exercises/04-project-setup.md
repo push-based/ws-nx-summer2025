@@ -53,9 +53,9 @@ the correct username to the instructors.
 
 
 ```bash
-git clone https://github.com/push-based/react-movies-app.git
+git clone https://github.com/push-based/ws-nx-summer2025.git
 
-cd react-movies-app
+cd ws-nx-summer2025
 
 npm install
 

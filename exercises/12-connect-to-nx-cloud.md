@@ -17,7 +17,7 @@ The only thing that you need to do is to put the following accessToken configura
 ```json
 // nx.json
 {
-  "nxCloudId": "682dcf0e246aae99cbac4e14"
+  "nxCloudId": "68822d24ce93cc846733d692"
 }
 ```
 
