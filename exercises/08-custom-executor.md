@@ -20,14 +20,14 @@ as part of our plugin `workspace-tools` that we've created before.
 
 Use the `@nx/plugin:executor` generator to generate a new `deploy` executor.
 
-Use the `--director=tools/workspace/src/executors/deploy` argument to specify it as a target for the existing plugin.
+Use the `tools/workspace/src/executors/deploy` as directory to specify it as a target for the existing plugin.
 
 <details>
   <summary>generate the deploy executor</summary>
 
 ```bash
 
-npx nx g @nx/plugin:executor deploy --directory=tools/workspace/src/executors/deploy 
+npx nx g @nx/plugin:executor tools/workspace/src/executors/deploy --name deploy 
 
 
 ```
@@ -181,9 +181,9 @@ is actually executed.
 `docker build -f ${options.dockerFile} --build-arg='APP_NAME=${projectName}' . -t ${options.tag}`
 ```
 
-In order to do this, we are going we use the `exec` helper from `node:child_process`!
+To do this, we are going we use the `exec` helper from `node:child_process`!
 
-Your task will be, to use the `import { exec } from 'node_child_process'` in order to
+Your task will be to use the `import { exec } from 'node_child_process'` in order to
 run the command shown above.
 
 <details>
@@ -267,6 +267,8 @@ try {
 <details>
   <summary>Full solution</summary>
 
+tools/workspace/src/executors/deploy.ts:  
+
 ```ts
 
 // exectuor
@@ -302,6 +304,53 @@ const runExecutor: PromiseExecutor<DeployExecutorSchema> = async (
 };
 
 export default runExecutor;
+
+```
+
+apps/movies/project.json:  
+
+```json
+{
+  "targets": {
+    "deploy": {
+      "executor": "@react-monorepo/workspace-tools:deploy",
+      "options": {
+        "dockerFile": "tools/deploy/frontend.Dockerfile",
+        "tag": "ghcr.io/push-based/react-movies-app/react-movies-app:dev"
+      }
+    }
+  }
+}
+```
+
+tools/workspace/src/executors/schema.json:  
+
+```json
+
+{
+  "properties": {
+    "dockerFile": {
+      "type": "string",
+      "description": "path to dockerfile"
+    },
+    "tag": {
+      "type": "string",
+      "description": "tag for the docker container"
+    }
+  },
+  "required": ["dockerFile", "tag"]
+}
+
+```
+
+tools/workspace/src/executors/schema.d.ts:  
+
+```ts
+
+export interface DeployExecutorSchema {
+  dockerFile: string;
+  tag: string;
+}
 
 ```
 

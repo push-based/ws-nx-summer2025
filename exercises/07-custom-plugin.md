@@ -36,13 +36,15 @@ This step initializes the necessary setup for your custom generator.
 
 ```bash
 
-nx generate @nx/plugin:plugin workspace-tools --directory=tools/workspace
+npx nx generate @nx/plugin:plugin tools/workspace --name workspace-tools
 
 ```
 
 </details>
 
 ![image](./images/custom-plugin-directory.png)
+
+Congratulations, you've successfully generated your first nx plugin ;)
 
 ---
 

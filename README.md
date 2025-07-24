@@ -42,12 +42,11 @@ npm run start
 2. [Nx Intro: Run Tasks and Task Pipelines](./exercises/02-task-pipelines.md)
 3. [Nx Intro: Affected & Caching](./exercises/03-affected-and-caching.md)
 4. [Movies App Project Setup](./exercises/04-project-setup.md)
-5. [Scalable Architectures: Design a workspace architecture](./exercises/05-scalable-architecture-design.md)
-6. [Module Boundaries](./exercises/06-enforce-module-boundaries.md)
-7. [Extend Nx: Custom Plugins](./exercises/07-custom-plugin.md)
-8. [Extend Nx: Custom Executors](./exercises/08-custom-executor.md)
-9. [Extend Nx: Custom Generator](./exercises/09-custom-generator.md)
-10. [Extend Nx: Task Inheritance - Project Crystal](./exercises/10-cristal-plugin.md)
+5. [Module Boundaries](./exercises/06-enforce-module-boundaries.md)
+6. [Extend Nx: Custom Plugins](./exercises/07-custom-plugin.md)
+7. [Extend Nx: Custom Executors](./exercises/08-custom-executor.md)
+8. [Extend Nx: Custom Generator](./exercises/09-custom-generator.md)
+9. [Extend Nx: Task Inheritance - Project Crystal](./exercises/10-cristal-plugin.md)
 
 ### Day 2
 
