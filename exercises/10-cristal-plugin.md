@@ -50,7 +50,7 @@ function normalizeOptions(
     deployTargetName: options.deployTargetName ?? 'deploy',
     buildTargetName: options.buildTargetName ?? 'build',
     organizationName: options.organizationName ?? 'push-based',
-    repositoryName: options.repositoryName ?? 'react-movies-app',
+    repositoryName: options.repositoryName ?? 'ws-nx-summer2025',
   };
 }
 
@@ -128,8 +128,8 @@ You can take this as a blueprint:
         {}
       ],
       "options": {
-        "dockerFile": "tools/deploy/frontend.Dockerfile",
-        "tag": "ghcr.io/push-based/react-movies-app/react-movies-app:dev"
+        "dockerFile": "tools/deploy/deploy.Dockerfile",
+        "tag": "ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
       }
     }
   }
@@ -197,7 +197,7 @@ function normalizeOptions(
     deployTargetName: options.deployTargetName ?? 'deploy',
     buildTargetName: options.buildTargetName ?? 'build',
     organizationName: options.organizationName ?? 'push-based',
-    repositoryName: options.repositoryName ?? 'react-movies-app',
+    repositoryName: options.repositoryName ?? 'ws-nx-summer2025',
   };
 }
 
@@ -351,8 +351,8 @@ Remove the section that says `targets` in your `apps/movies/project.json` file.
     "deploy": {
       "executor": "@react-monorepo/workspace-tools:deploy",
       "options": {
-        "dockerFile": "tools/deploy/frontend.Dockerfile",
-        "tag": "ghcr.io/push-based/react-movies-app/react-movies-app:dev"
+        "dockerFile": "tools/deploy/deploy.Dockerfile",
+        "tag": "ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
       }
     }
   }
@@ -441,7 +441,7 @@ function normalizeOptions(
     deployTargetName: options.deployTargetName ?? 'deploy',
     buildTargetName: options.buildTargetName ?? 'build',
     organizationName: options.organizationName ?? 'push-based',
-    repositoryName: options.repositoryName ?? 'react-movies-app',
+    repositoryName: options.repositoryName ?? 'ws-nx-summer2025',
   };
 }
 

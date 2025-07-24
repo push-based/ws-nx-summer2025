@@ -8,7 +8,9 @@
 
 In this exercise you'll get to know the power of nx distributed caching.
 
-## 1. Recap Local Cache
+## 1. Recap Cache
+
+### 1.1 Recap Local Cache
 
 First, let's recap the nxs local cache. It is already enabled by default and you can confirm
 by taking a look at your `nx.json`. In the `targetDefaults` section, you'll find `cache: true`.
@@ -30,6 +32,43 @@ You should notice the build is running significantly faster than before.
 Your terminal should output the following statement:
 
 `> nx run movies:build:production  [existing outputs match the cache, left as is]`
+
+### 1.2 Experience Cloud Cache
+
+You've now fed the cloud cache with your local build.
+
+You can easily confirm that.
+
+Either run `npx nx reset` or delete the contents of the `.nx/cache` & `.nx/workspace-data` folder.
+
+```bash
+npx nx reset
+
+# OR
+
+rm -rf ./nx/cache
+rm -rf ./nx/workspace-data
+
+```
+
+Now run `npx nx build movies` again.
+
+You should see how the nx graph computes and then you'll be presented with the dist from the nx cloud.
+The terminal confirms that as well.
+
+```bash
+> nx run movies:build  [remote cache]
+
+
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+ NX   Successfully ran target build for project movies (2s)
+
+Nx read the output from the cache instead of running the command for 1 out of 1 tasks.
+
+
+Nx Cloud made it possible to reuse movies: https://nx.app/runs/l13K0mJRvR
+```
 
 ## 2. Find a Cache Consumer ;-)
 

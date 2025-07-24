@@ -126,14 +126,6 @@ export default runExecutor;
 
 # 4. Use & Execute it
 
-## 4.0 Build the plugin
-
-This is something that has to be done! We need to build the plugin before we can use it!
-
-```bash
-npx nx build workspace-tools
-```
-
 ## 4.1 Configure it as an executor
 
 Now let's open the `apps/movies/project.json` and configure the `deploy` target to use our new
@@ -147,9 +139,10 @@ executor!
   "targets": {
     "deploy": {
       "executor": "@react-monorepo/workspace-tools:deploy",
+      "dependsOn": ["build"],
       "options": {
-        "dockerFile": "tools/deploy/frontend.Dockerfile",
-        "tag": "ghcr.io/push-based/react-movies-app/react-movies-app:dev"
+        "dockerFile": "tools/deploy/deploy.Dockerfile",
+        "tag": "ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
       }
     }
   }
@@ -315,8 +308,8 @@ apps/movies/project.json:
     "deploy": {
       "executor": "@react-monorepo/workspace-tools:deploy",
       "options": {
-        "dockerFile": "tools/deploy/frontend.Dockerfile",
-        "tag": "ghcr.io/push-based/react-movies-app/react-movies-app:dev"
+        "dockerFile": "tools/deploy/deploy.Dockerfile",
+        "tag": "ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
       }
     }
   }

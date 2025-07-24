@@ -212,7 +212,7 @@ export async function addDockerfileGenerator(
         executor: 'nx:run-commands',
         dependsOn: ["build"],
         options: {
-          command: `docker build -f ${projectRoot}/deploy.Dockerfile --build-arg='APP_NAME=${selectedProject.name}' . -t ghcr.io/push-based/react-movies-app/react-movies-app:dev`,
+          command: `docker build -f ${projectRoot}/deploy.Dockerfile --build-arg='APP_NAME=${selectedProject.name}' . -t ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev`,
         },
       },
     },
@@ -286,7 +286,7 @@ export async function addDockerfileGenerator(
         executor: 'nx:run-commands',
         dependsOn: ['build'],
         options: {
-          command: `docker build -f ${projectRoot}/deploy.Dockerfile --build-arg='APP_NAME=${selectedProject.name}' . -t ghcr.io/push-based/react-movies-app/react-movies-app:dev`,
+          command: `docker build -f ${projectRoot}/deploy.Dockerfile --build-arg='APP_NAME=${selectedProject.name}' . -t ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev`,
         },
       },
     },
