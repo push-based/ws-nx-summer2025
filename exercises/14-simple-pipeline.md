@@ -4,7 +4,10 @@
 
 ---
 
-# `📖 Exercise:` Create a simple CI/CD Pipeline
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
+# 📖 Exercise: Create a simple CI/CD Pipeline
 
 In this exercise we'll learn how nx improves the way how we write and execute CI/CD pipelines.
 
@@ -176,6 +179,22 @@ Now let's do the same trick, but in vice versa.
 Now you can watch the CI using the cache you have produced locally. It's pure beauty 🤌
 
 Make sure to visit the nx cloud dashboard. It'll tell you about cache hits or misses!
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Make sure that you are using `nx affected` in your CI pipeline rather than `run-many`
+
+**🧠 Discussion Topics:**
+- Which developers are responsible for configuring the CI pipeline?
+  - What are their primary goals?  Can Nx Cloud help them?
+- Nx affected and caching reduce wasted time in CI. Let's assume that `affected` and caching together eliminate 50% of the tasks you're currently running in CI. What would that mean for your organization?
+  - How much money would that save in CI provider credits?
+  - How much faster would PRs turn green?
 
 ---
 

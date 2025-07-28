@@ -4,7 +4,10 @@
 
 ---
 
-# `📖 Exercise:` Automated Task Splitting with Nx Atomizer
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
+# 📖 Exercise: Automated Task Splitting with Nx Atomizer
 
 ## 📚&nbsp;&nbsp;**Learning outcomes**
 
@@ -12,12 +15,6 @@
 - Learn how to use Nx Atomizer to split tasks into smaller chunks for our Playwright tests
 
 ## 🏋️‍♀️&nbsp;&nbsp;Steps:
-
-### 0. Remove obsolete Playwright installation on GH Actions
-
-Notice the GH actions log and how we're installing Playwright on GH Actions even though we moved running these to Nx Agents. Optimize the CI config to avoid such duplication.
-
-Test whether your CI still works properly.
 
 ### 1. Inspect whether Atomizer is already enabled
 
@@ -85,6 +82,19 @@ Once you adjusted the `parallelism` property, push your changes to the remote re
 ```
 
 </details>
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Enable the task atomizer
+
+**🧠 Discussion Topics:**
+- Can you predict how enabling atomizer will affect your CI pipeline before you turn it on? How many new tasks will be created? How long will they run?
+- What might cause a previously passing test to fail once atomizer is enabled?
 
 ---
 

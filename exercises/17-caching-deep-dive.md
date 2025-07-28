@@ -4,7 +4,10 @@
 
 ---
 
-# `📖 Exercise:` Cache miss debugging, optimizations and fine tuning of inputs and outputs
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
+# 📖 Exercise: Cache miss debugging, optimizations and fine tuning of inputs and outputs
 
 ## 📚&nbsp;&nbsp;**Learning outcomes**
 - Learn how to debug cache misses
@@ -14,7 +17,7 @@
 
 ### 1. Understanding the task hash
 
-Everytime we run a task, Nx will associate a hash signature to that task run.
+Every time we run a task, Nx will associate a hash signature to that task run.
 
 The hash signature is based on following variables:
 - Command being run
@@ -64,17 +67,17 @@ Replace that input now with a more controlled `environment` input:
 
 Now run the command with `MY_SECRET=one nx build movies-api`. 
 
-Notice how first time the cache will be busted, but then subseqent runs will result in cache hits.
+Notice how the first time the cache will be busted, but then subsequent runs will result in cache hits.
 
-Change the value of the `MY_SECRET` parameter so see how that affects the caching.
+Change the value of the `MY_SECRET` parameter to see how that affects the caching.
 
 Whenever our task depends on environment where it's being invoked or upon some external tool that we can't control within Nx itself we can use those two inputs to ensure caching is accurate.
 
 ### 3. Debugging the task cache miss
 
-Sometimes we get cache miss despite expecting a cache hit. Investigating why certain task was not retrieved from the cache can seem a difficult task. Let's learn some steps that will help us investigate cache misses.
+Sometimes we get a cache miss despite expecting a cache hit. Investigating why a certain task was not retrieved from the cache can seem a difficult task. Let's learn some steps that will help us investigate cache misses.
 
-By prefixing your command with `NX_NATIVE_LOGGING=trace NX_DAEMON=false ...` your task will be printed out with the full Rust trace which will include all the details about hashing. Look for the following section - `hashes=NapiDashMap({ ... })`. It containst the large object with HashDetails of all the tasks involved in your tast run.
+By prefixing your command with `NX_NATIVE_LOGGING=trace NX_DAEMON=false ...` your task will be printed out with the full Rust trace which will include all the details about hashing. Look for the following section - `hashes=NapiDashMap({ ... })`. It contains the large object with HashDetails of all the tasks involved in your last run.
 
 Finally, in case of cache hit, you will see the block starting with:
 ```bash
@@ -103,7 +106,7 @@ Notice the following sections in the output hash details:
 
 Remember how we mentioned that our task hash also depends on the executor triggering the task.
 
-Each executor is represented by the NPM package that contains it, as well as its dependencies. These end up in the `npmDependencies` section. There is a caviat though. When you are running custom third-party executor or `run-commands` we have no control or guarantee on which packages might be involved in the invocation so all packages are included.
+Each executor is represented by the NPM package that contains it, as well as its dependencies. These end up in the `npmDependencies` section. There is a caveat though. When you are running custom third-party executor or `run-commands` we have no control or guarantee on which packages might be involved in the invocation so all packages are included.
 
 As you will learn in the next lab, there is one input configuration that can limit this.
 
@@ -117,6 +120,22 @@ If you run your `lint` now the results should still be retrieved from the cache.
 ### 5. Final thoughts
 
 In this lab we learned how to optimize our task inputs to get the best caching results. In the next lab we will use some of those learnings to implement the continuous deployment in the most optimal way.
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Optimize the inputs for a task
+
+**🧠 Discussion Topics:**
+- Inputs should be optimized for tasks that:
+  1. Are executed frequently
+  2. Have a low cache hit ratio
+- Which tasks fit those criteria in your repository?
+- Make sure you understand all the [types of inputs](https://nx.dev/reference/inputs). Should you be using these input types for your tasks?
 
 ---
 

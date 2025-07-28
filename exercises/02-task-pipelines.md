@@ -4,7 +4,10 @@
 
 ---
 
-# `📖 Exercise:` Run Tasks and Task Pipelines
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
+# 📖 Exercise: Run Tasks and Task Pipelines
 
 In this exercise, you'll learn how to run various executors including serve, build, lint, test, and e2e commands. You'll also understand command structure variations and explore build outputs and development server functionality.
 
@@ -144,6 +147,22 @@ After completing this exercise, you should understand:
 - How to visualize task dependencies using the task graph
 
 The task pipeline system is one of Nx's core features that makes it much easier to manage complex build processes in monorepos.
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Create a task pipeline in your repository by defining a dependsOn property for one task.
+
+**🧠 Discussion Topics:**
+- Do you already have a dependency relationship between tasks? Replace one of these with an Nx task pipeline. This could look like any of the following:
+  - A `README.md` file reminding developers to make sure to run one command first
+  - `npm build && npm test`
+  - Using the `npm-run-all` package with `run-s` and `run-p`
+- Do you have an existing task that would make more sense as two different dependent tasks? Clear signs of this are tasks with `and` in the name, e.g. `build-and-deploy`
 
 ---
 

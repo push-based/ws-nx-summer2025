@@ -4,7 +4,10 @@
 
 ---
 
-# `📖 Exercise:` Nx Cloud Agents
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
+# 📖 Exercise: Nx Cloud Agents
 
 In this exercise we'll learn how to use nx cloud agents and distributed task execution that we do not
 have to maintain ourselves. Instead we can just let nx cloud handle executions for us.
@@ -141,6 +144,9 @@ and follow the links to the cloud dashboard executions.
 
 ![cloud-in-success.png](./images/cloud-in-success.png)
 
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
 
 # 4. [OPTIONAL]: Play around with dynamic allocation
 
@@ -154,6 +160,17 @@ setup to use.
 Then u point the `--distribute-on=".nx/workflows/dynamic-changesets.yaml"` and you should be good to go.
 
 As always, don't overdo it with the large machines.
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Enable Nx Agents or Manual DTE in your repository
+
+**🧠 Discussion Topics:**
+- What is the fastest possible pipeline completion time for your repository, assuming you had an infinite number of agents?
+  - The pipeline can't complete faster than your longest task. Do you have a few tasks that are much longer than all the others?  (See [the Atomizer exercise](./18-atomizer.md))
+  - Also, projects with a lot of tests take longer to run those tests. Consider breaking those projects into smaller projects.
+  - What are the resource intensive tasks in your pipeline?
 
 ---
 

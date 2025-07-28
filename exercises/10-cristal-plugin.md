@@ -4,7 +4,10 @@
 
 ---
 
-# Nx Interred Tasks
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
+# Nx Inferred Tasks
 
 Learn how to create a crystal plugin with Nx.
 
@@ -646,6 +649,18 @@ export * from './plugins/plugin';
 
 </details>
 
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Create an inferred task
+
+**🧠 Discussion Topics:**
+- If you were to create an inferred task, how many duplicate copies of existing task configuration code, could you delete?
+- What are the tradeoffs between writing an executor with task configuration vs writing an inferred task with no configuration?
 
 ---
 

@@ -4,6 +4,9 @@
 
 ---
 
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
 # Nx Custom Generator
 In this exercise, we will create a custom generator which adds a DockerFile to a application.
 
@@ -432,6 +435,20 @@ EXPOSE 80
 ```
 
 </details>
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Create a custom generator for your repository
+
+**🧠 Discussion Topics:**
+- Useful custom generators include:
+  - Restrict Nx-provided executors to only offer the options that make sense in your organization
+  - Changing a todo list in a README file into a single command
 
 ---
 

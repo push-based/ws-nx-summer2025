@@ -4,7 +4,10 @@
 
 ---
 
-# `📖 Exercise:` Affected & Caching
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
+# 📖 Exercise: Affected & Caching
 
 In this exercise we'll learn how Nx improves the performance of your tasks with caching and the affected command.
 
@@ -220,6 +223,24 @@ We will see that the build process is much faster, because the output of the bui
 </details>
 
 The second build, lint & test will be much faster, because the output of the target is read from the cache.
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Identify tasks that should be cached
+
+**🧠 Discussion Topics:**
+- Do you have any custom tasks that should be cached? A cacheable task is any task that has deterministic outputs given the same inputs. Tasks like `build` and `test` are typically cacheable. Tasks like `serve` are typically not.
+- What factors in your codebase would cause a task to not be cacheable? This includes things like:
+  - Interactions with external APIs or databases
+  - Continuous tasks (i.e. `serve` or `watch`)
+  - Randomization
+  - Missing or incorrect input configuration
+- See: https://nx.dev/recipes/running-tasks/configure-inputs
 
 ---
 

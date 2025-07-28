@@ -4,7 +4,7 @@
 
 ---
 
-# `📖 Exercise:` Nx Import, Powerpack, CodeOwners, Conformance
+# 📖 Exercise: Nx Import, Powerpack, CodeOwners, Conformance
 
 ## 📚&nbsp;&nbsp;**Learning outcomes**
 

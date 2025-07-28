@@ -4,6 +4,9 @@
 
 ---
 
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
 # Nx Custom Executor
 
 Learn how to create a custom executor with Nx for enhancing your project setup. 
@@ -356,6 +359,20 @@ npx nx run movies:deploy
 ```
 
 You should see all the outputs from docker as before!
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Think of a custom executor that would be useful in your own repository
+
+**🧠 Discussion Topics:**
+- Potential candidates for a custom executor include:
+  - Nx plugin executors that you want to lock down to always be run with the recommended settings for your organization
+  - Custom scripts that you want to be more configurable and discoverable
 
 ---
 

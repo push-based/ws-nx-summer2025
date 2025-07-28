@@ -4,7 +4,10 @@
 
 ---
 
-# `📖 Exercise:` Nx Scalable Architecture Design
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
+# 📖 Exercise: Nx Scalable Architecture Design
 
 In this exercise we will learn how to create scalable architecture design using Nx.
 We will create multiple libraries of all types (feature, data-access, ui, util) and scopes (movies, shared).
@@ -310,12 +313,6 @@ nx run-many -t lint
 - After creating all the libraries, make sure that the application is still working as expected.
 - Run `nx graph` and see how the dependencies are connected between the libraries and the application.
 
----
-
-**[← Previous: Project Setup](./04-project-setup.md) | [Next: Module Boundaries →](./06-enforce-module-boundaries.md)**
-
----
-
 ### 2.1 Create libraries for all things we need
 
 First, create all libraries that we need for our application. And then we can migrate the code from the app to the libraries, and also fix the imports.
@@ -424,3 +421,23 @@ npx nx generate @nx/react:library --name=movies-feature-navbar --directory=libs/
   - `AuthContext` from `@react-monorepo/shared-auth-data-access`.
   - `useFavorites` from `@react-monorepo/movies-data-access`.
 
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Identify projects in your repository that should be split into multiple projects
+
+**🧠 Discussion Topics:**
+- Projects with these characteristics might be good candidates to be split:
+  - A project that is depended on by a lot of other projects
+  - A project that is a collection of unrelated code
+- See: https://nx.dev/concepts/decisions/project-size
+
+---
+
+**[← Previous: Project Setup](./04-project-setup.md) | [Next: Module Boundaries →](./06-enforce-module-boundaries.md)**
+
+---

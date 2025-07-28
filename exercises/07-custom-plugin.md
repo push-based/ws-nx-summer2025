@@ -4,7 +4,10 @@
 
 ---
 
-# `📖 Exercise:` Custom Plugin
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
+# 📖 Exercise: Custom Plugin
 
 Learn how to create a custom executor with Nx for enhancing your project setup. This guide covers generating a plugin, adopting a custom configuration, and executing the executor to streamline development processes.
 
@@ -45,6 +48,15 @@ npx nx generate @nx/plugin:plugin tools/workspace --name workspace-tools
 ![image](./images/custom-plugin-directory.png)
 
 Congratulations, you've successfully generated your first nx plugin ;)
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Create a custom plugin in your repository
 
 ---
 

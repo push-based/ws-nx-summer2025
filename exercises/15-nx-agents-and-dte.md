@@ -4,7 +4,10 @@
 
 ---
 
-# `📖 Exercise:` Nx Agents & DTE
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
+# 📖 Exercise: Nx Agents & DTE
 
 In this exercise we'll learn how to use nx agents and distributed task execution.
 
@@ -370,6 +373,19 @@ jobs:
         if: ${{ always() }}
         run: npx nx-cloud stop-all-agents
 ```
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Wait for the next exercise...
+
+**🧠 Discussion Topics:**
+- Nx Agents allow you to easily spend money to make your pipelines complete faster. Using more agents costs more, but your tasks complete faster.
+  - Why is this flexibility valuable?
 
 ---
 

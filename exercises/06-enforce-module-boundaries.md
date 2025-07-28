@@ -4,6 +4,9 @@
 
 ---
 
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
 # Nx Enforce Module Boundaries
 
 In this exercise you'll learn how to enforce architecture constraints. We will use the built-in eslint rule `@nx/enforce-module-boundaries`
@@ -284,6 +287,20 @@ Run the lint command for affected projects to see if your changes break some rul
 ```bash
 nx affected:lint
 ```
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Decide the tags you will use for your projects.
+
+**🧠 Discussion Topics:**
+- What scopes make sense for your repository?
+- Are there other types that make sense for you?
+- What other categories of tags might be useful?  Categories like `platform:` or `language:`
 
 ---
 

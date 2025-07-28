@@ -4,7 +4,10 @@
 
 ---
 
-# `📖 Exercise:` Create a branch
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
+# 📖 Exercise: Create a branch
 
 ## 0. Setup a new branch & configure `base`
 
@@ -59,6 +62,15 @@ And also push your changes to the remote.
 ```bash
 git push
 ```
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- 😀 Smile 😀
 
 ---
 

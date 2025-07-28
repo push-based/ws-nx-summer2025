@@ -4,6 +4,9 @@
 
 ---
 
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
 # Nx Replay
 
 In this exercise you'll get to know the power of nx distributed caching.
@@ -33,7 +36,7 @@ Your terminal should output the following statement:
 
 `> nx run movies:build:production  [existing outputs match the cache, left as is]`
 
-### 1.2 Experience Cloud Cache
+### 1.2 Experience Cloud Cache (Nx Replay)
 
 You've now fed the cloud cache with your local build.
 
@@ -105,6 +108,23 @@ You should notice the build on the other computer was instant as the cloud cache
 immediately. It'll also give the same detail information about the nx cloud run.
 
 Now you all can follow the link and inspect the dashboard :-)
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Use distributed cache in your CI pipeline
+  - This happens automatically if you are connected to Nx Cloud
+
+**🧠 Discussion Topics:**
+- Nx `affected` saves you the most time on the first commit of a PR. Caching saves you the most time for subsequent commits.
+  - Can you figure out why that's true?
+  - How many of your PRs take multiple commits before they merge?
+- Caching is great for performance, but you also need to consider the security implications.
+  - See: https://nx.dev/ci/concepts/cache-security
 
 ---
 

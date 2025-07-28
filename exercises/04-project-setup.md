@@ -4,7 +4,10 @@
 
 ---
 
-# `📖 Exercise:` project setup
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
+# 📖 Exercise: project setup
 
 This exercise is here to make sure your setup is properly configured so that you don't run into any issues
 when doing the actual coding exercises.
@@ -155,6 +158,15 @@ Open the settings and search for `eslint`, set it up like shown in the following
 Open the settings and search for `prettier`, set it up like shown in the following image:
 
 ![prettier-setup-webstorm.png](./images/prettier-setup-webstorm.png)
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Drink some water 🥛 (or milk)
 
 ---
 

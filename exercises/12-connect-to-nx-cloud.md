@@ -4,7 +4,10 @@
 
 ---
 
-# `📖 Exercise:` Connect to Nx Cloud
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
+# 📖 Exercise: Connect to Nx Cloud
 
 ## 1. connect-to-nx-cloud
 
@@ -20,6 +23,19 @@ The only thing that you need to do is to put the following accessToken configura
   "nxCloudId": "68822d24ce93cc846733d692"
 }
 ```
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Check if your repository is connected to Nx Cloud
+
+**🧠 Discussion Topics:**
+- Who would need to be part of the conversation if you wanted to start using Nx Cloud?
+- What value would they need to see?
 
 ---
 

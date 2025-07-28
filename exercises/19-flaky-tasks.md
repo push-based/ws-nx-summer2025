@@ -4,12 +4,15 @@
 
 ---
 
-# `📖 Exercise:` Exploring flaky task detection on Nx Agents
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
+# 📖 Exercise: Exploring flaky task detection on Nx Agents
 
 ## 📚&nbsp;&nbsp;**Learning outcomes**
 
 - Create a flaky task
-- Learn how Nx Agents automatically detect them and
+- Learn how Nx Agents automatically detect them and retry them
 
 ## 🏋️‍♀️&nbsp;&nbsp;Steps:
 
@@ -40,6 +43,19 @@ Also if you open the the project containing the flaky task you should see how it
 ## That's it! 🎉
 
 You made it all the way through! Are you up for some [✨ bonus tasks ✨](./20-bonus.md)?
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Find a flaky task in your repository
+
+**🧠 Discussion Topics:**
+- Why is it flaky? Can you fix it?
+- Is it better to disable flaky tasks or to leave them in place until they are fixed?
 
 ---
 

@@ -4,7 +4,10 @@
 
 ---
 
-# `📖 Exercise:` Initialize Nx
+✋ Raise your hand to show you've started the exercise. ✋
+---
+
+# 📖 Exercise: Initialize Nx
 
 In this exercise, you'll learn how to add Nx to an existing TypeScript repository and explore the project graph that Nx constructs from analyzing your codebase.
 
@@ -162,6 +165,20 @@ After completing this exercise, you should understand:
 - How the project graph provides an accurate view of your workspace architecture
 
 The project graph is one of Nx's most powerful features - it's derived directly from your codebase and helps you understand the relationships between your projects at a glance.
+
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
+
+## 🏃‍♂️‍➡️ Action Steps
+
+**👟 Next Step:**
+- Run `nx init` on one of your repositories that is not using Nx
+- Explore the project graph for your repository
+
+**🧠 Discussion Topics:**
+- Is there a project dependency that surprises you? Click on the line to see which files create that dependency.
+- Are you happy with the overall shape of your graph? What development practices would lead to more horizontal graphs vs. more vertical graphs?
 
 ---
 
