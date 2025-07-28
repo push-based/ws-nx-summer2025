@@ -15,7 +15,7 @@ export default function useMovieDetails() {
   useEffect(() => {
     const fetchMovie = async () => {
       try {
-        const response = await fetch(`${API_URL}/movies/${movieId}`);
+        const response = await fetch(`${API_URL}/movie/${movieId}`);
 
         if (!response.ok) {
           throw new Error('Movie not found'); // Or a more descriptive error

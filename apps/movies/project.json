@@ -9,6 +9,12 @@
     "deploy": {
       "dependsOn": ["build"],
       "command": "docker build -f tools/deploy/deploy.Dockerfile --build-arg='APP_NAME=movies' . -t ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
+    },
+    "serve": {
+      "dependsOn": ["movies-api:serve"]
+    },
+    "preview": {
+      "dependsOn": ["movies-api:serve"]
     }
   }
 }

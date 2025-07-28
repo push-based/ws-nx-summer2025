@@ -20,7 +20,9 @@ export default function Homepage() {
     [movies, search]
   );
 
-  return (
+  return filteredMovies.length === 0 ? (
+    <h1>These are not the droids you are looking for</h1>
+  ) : (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         {filteredMovies.map((movie) => (

@@ -2,7 +2,7 @@
   "login": [],
   "favorites": [],
   "history": [],
-  "movies": [
+  "movie": [
     {
       "adult": false,
       "backdrop_path": "/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg",

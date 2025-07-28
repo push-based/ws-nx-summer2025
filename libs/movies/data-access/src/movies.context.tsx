@@ -18,7 +18,7 @@ export function MovieProvider({ children }: { children: React.ReactNode }) {
   // Fetch initial movies (replace with your actual API call)
   useEffect(() => {
     const fetchMovies = async () => {
-      const response = await fetch(`${API_URL}/movies`);
+      const response = await fetch(`${API_URL}/movie`);
       const data = await response.json();
       setMovies(data);
     };

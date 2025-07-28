@@ -37,23 +37,21 @@ Some files are explicitly specified, while others are represented by `namedInput
 
 Any change to files included in the inputs will result in the new hash signature.
 
-Try running the `build` for `movies-api`. Running the build for the second time should result in the cache hit. If you change for example `main.ts` next run will result in cache miss. But if we change the `app.controller.spec.ts` our `build` should still be retrieved from the cache, because we didn't change the production file set.
+Try running the `build` for `movies`. Running the build for the second time should result in the cache hit. If you change for example `main.tsx` next run will result in cache miss. But if we change the `README.md` our `build` should still be retrieved from the cache, because we didn't change the production file set.
 
 ### 2. Runtime and environment inputs
 
 Besides the file contents inputs, our tasks can also depend on runtime and environment variables and even outputs of their dependencies. As we will see in the next lab, this will become crucial to limit the cases when `deploy` target should run.
 
-Let's try playing with those inputs. Add to build target in `movies-api` `project.json` following runtime input:
+Let's try overriding the inputs. Add a build target in the `movies` `project.json` file with the following runtime input:
 
 ```jsonc
 "build": {
-  // ...
   "inputs": [{ "runtime": "date" }]
-  // ...
 }
 ```
 
-Try running `nx build movies-api` several times in a row. Notice how we are no longer getting cache hits. That's because our runtime input keeps changing.
+Try running `nx build movies` several times in a row. Notice how we are no longer getting cache hits. That's because our runtime input keeps changing.
 
 Replace that input now with a more controlled `environment` input:
 
@@ -65,7 +63,7 @@ Replace that input now with a more controlled `environment` input:
 }
 ```
 
-Now run the command with `MY_SECRET=one nx build movies-api`. 
+Now run the command with `MY_SECRET=one nx build movies`. 
 
 Notice how the first time the cache will be busted, but then subsequent runs will result in cache hits.
 
