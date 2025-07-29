@@ -1,3 +1,5 @@
+# 📖 Nx Agents & DTE
+
 ---
 
 **[← Previous: Simple CI/CD Pipeline](./14-simple-pipeline.md) | [Next: Nx Cloud Agents →](./16-nx-cloud-agents.md)**
@@ -6,8 +8,6 @@
 
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
-
-# 📖 Exercise: Nx Agents & DTE
 
 In this exercise we'll learn how to use nx agents and distributed task execution.
 

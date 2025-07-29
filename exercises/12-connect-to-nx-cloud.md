@@ -1,3 +1,5 @@
+# 📖 Connect to Nx Cloud
+
 ---
 
 **[← Previous: Create a branch](./11-create-a-branch.md) | [Next: Nx Replay →](./13-distributed-caching.md)**
@@ -6,8 +8,6 @@
 
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
-
-# 📖 Exercise: Connect to Nx Cloud
 
 ## 1. connect-to-nx-cloud
 

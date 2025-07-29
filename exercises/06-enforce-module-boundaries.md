@@ -1,3 +1,5 @@
+# 📖 Nx Enforce Module Boundaries
+
 ---
 
 **[← Previous: Movies App Project Setup](./05-scalable-architecture-design.md) | [Next: Custom Plugins →](./07-custom-plugin.md)**
@@ -6,8 +8,6 @@
 
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
-
-# Nx Enforce Module Boundaries
 
 In this exercise you'll learn how to enforce architecture constraints. We will use the built-in eslint rule `@nx/enforce-module-boundaries`
 in order to configure how libraries are allowed to depend on each other.

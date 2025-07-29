@@ -1,3 +1,5 @@
+# 📖 Nx Custom Executor
+
 ---
 
 **[← Previous: Custom Plugins](./07-custom-plugin.md) | [Next: Custom Generator →](./09-custom-generator.md)**
@@ -6,8 +8,6 @@
 
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
-
-# Nx Custom Executor
 
 Learn how to create a custom executor with Nx for enhancing your project setup. 
 This guide covers generating a plugin, adopting a custom configuration, and executing the executor to streamline development processes.

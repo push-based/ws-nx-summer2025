@@ -1,3 +1,5 @@
+# 📖 Exploring flaky task detection on Nx Agents
+
 ---
 
 **[← Previous: Nx Atomizer](./18-atomizer.md) | [Next: Nx Import, Powerpack & Conformance →](./20-bonus.md)**
@@ -6,8 +8,6 @@
 
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
-
-# 📖 Exercise: Exploring flaky task detection on Nx Agents
 
 ## 📚&nbsp;&nbsp;**Learning outcomes**
 

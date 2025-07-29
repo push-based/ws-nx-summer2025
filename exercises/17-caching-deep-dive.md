@@ -1,3 +1,5 @@
+# 📖 Cache miss debugging, optimizations and fine tuning of inputs and outputs
+
 ---
 
 **[← Previous: Nx Cloud Agents](./16-nx-cloud-agents.md) | [Next: Nx Atomizer →](./18-atomizer.md)**
@@ -6,8 +8,6 @@
 
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
-
-# 📖 Exercise: Cache miss debugging, optimizations and fine tuning of inputs and outputs
 
 ## 📚&nbsp;&nbsp;**Learning outcomes**
 - Learn how to debug cache misses

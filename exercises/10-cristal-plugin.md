@@ -1,3 +1,5 @@
+# 📖 Nx Inferred Tasks
+
 ---
 
 **[← Previous: Custom Generator](./09-custom-generator.md) | [Next: Create a branch →](./11-create-a-branch.md)**
@@ -7,11 +9,9 @@
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
 
-# Nx Inferred Tasks
+Learn how to create inferred tasks with an Nx plugin.
 
-Learn how to create a crystal plugin with Nx.
-
-This document guides you through creating a custom Nx crystal plugin to add a `deploy` target to your
+This document guides you through creating an Nx plugin that adds a `deploy` target to your
 applications based on the existence of a `Dockerfile`.
 
 We already have a custom executor to execute the `deploy` target. We have to manually configure it per project. 

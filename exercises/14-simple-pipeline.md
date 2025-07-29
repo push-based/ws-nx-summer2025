@@ -1,3 +1,5 @@
+# 📖 Create a simple CI/CD Pipeline
+
 ---
 
 **[← Previous: Nx Replay](./13-distributed-caching.md) | [Next: Nx Agents & DTE →](./15-nx-agents-and-dte.md)**
@@ -6,8 +8,6 @@
 
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
-
-# 📖 Exercise: Create a simple CI/CD Pipeline
 
 In this exercise we'll learn how nx improves the way how we write and execute CI/CD pipelines.
 

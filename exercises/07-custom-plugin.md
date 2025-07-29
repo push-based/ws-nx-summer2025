@@ -1,3 +1,5 @@
+# 📖 Custom Plugin
+
 ---
 
 **[← Previous: Module Boundaries](./06-enforce-module-boundaries.md) | [Next: Custom Executors →](./08-custom-executor.md)**
@@ -6,8 +8,6 @@
 
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
-
-# 📖 Exercise: Custom Plugin
 
 Learn how to create a custom executor with Nx for enhancing your project setup. This guide covers generating a plugin, adopting a custom configuration, and executing the executor to streamline development processes.
 

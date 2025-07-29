@@ -1,3 +1,5 @@
+# 📖 Affected & Caching
+
 ---
 
 **[← Previous: Run Tasks and Task Pipelines](./02-task-pipelines.md) | [Next: Project Setup →](./04-project-setup.md)**
@@ -6,8 +8,6 @@
 
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
-
-# 📖 Exercise: Affected & Caching
 
 In this exercise we'll learn how Nx improves the performance of your tasks with caching and the affected command.
 

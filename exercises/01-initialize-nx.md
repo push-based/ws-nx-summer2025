@@ -1,3 +1,5 @@
+# 📖 Initialize Nx
+
 ---
 
 **[Next: Run Tasks and Task Pipelines →](./02-task-pipelines.md)**
@@ -6,8 +8,6 @@
 
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
-
-# 📖 Exercise: Initialize Nx
 
 In this exercise, you'll learn how to add Nx to an existing TypeScript repository and explore the project graph that Nx constructs from analyzing your codebase.
 

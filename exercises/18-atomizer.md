@@ -1,3 +1,5 @@
+# 📖 Automated Task Splitting with Nx Atomizer
+
 ---
 
 **[← Previous: Cache Debugging & Optimization](./17-caching-deep-dive.md) | [Next: Flaky Task Detection →](./19-flaky-tasks.md)**
@@ -6,8 +8,6 @@
 
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
-
-# 📖 Exercise: Automated Task Splitting with Nx Atomizer
 
 ## 📚&nbsp;&nbsp;**Learning outcomes**
 

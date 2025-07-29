@@ -1,3 +1,5 @@
+# Nx Replay
+
 ---
 
 **[← Previous: Connect to Nx Cloud](./12-connect-to-nx-cloud.md) | [Next: Simple CI/CD Pipeline →](./14-simple-pipeline.md)**
@@ -6,8 +8,6 @@
 
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
-
-# Nx Replay
 
 In this exercise you'll get to know the power of nx distributed caching.
 

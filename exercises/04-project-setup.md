@@ -1,3 +1,5 @@
+# 📖 project setup
+
 ---
 
 **[← Previous: Affected & Caching](./03-affected-and-caching.md) | [Next: Scalable Architecture Design →](./05-scalable-architecture-design.md)**
@@ -6,8 +8,6 @@
 
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
-
-# 📖 Exercise: project setup
 
 This exercise is here to make sure your setup is properly configured so that you don't run into any issues
 when doing the actual coding exercises.

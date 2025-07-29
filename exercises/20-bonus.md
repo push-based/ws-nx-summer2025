@@ -1,10 +1,10 @@
+# 📖 Nx Import, Powerpack, CodeOwners, Conformance
+
 ---
 
 **[← Previous: Flaky Task Detection](./19-flaky-tasks.md)**
 
 ---
-
-# 📖 Exercise: Nx Import, Powerpack, CodeOwners, Conformance
 
 ## 📚&nbsp;&nbsp;**Learning outcomes**
 

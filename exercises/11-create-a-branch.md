@@ -1,3 +1,5 @@
+# 📖 Create a branch
+
 ---
 
 **[← Previous: Task Inheritance - Project Crystal](./10-cristal-plugin.md) | [Next: Connect to Nx Cloud →](./12-connect-to-nx-cloud.md)**
@@ -6,8 +8,6 @@
 
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
-
-# 📖 Exercise: Create a branch
 
 ## 0. Setup a new branch & configure `base`
 
