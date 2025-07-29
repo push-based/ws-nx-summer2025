@@ -44,7 +44,8 @@
         "libs/shared/feature-error-page/src/index.ts"
       ],
       "@react-monorepo/shared-models": ["libs/shared/models/src/index.ts"],
-      "@react-monorepo/shared-ui": ["libs/shared/ui/src/index.ts"]
+      "@react-monorepo/shared-ui": ["libs/shared/ui/src/index.ts"],
+      "@react-monorepo/utils": ["libs/shared/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
