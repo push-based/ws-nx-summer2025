@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { ErrorPage } from '@react-monorepo/shared-feature-error-page';
 import { Favorites } from '@react-monorepo/movies-feature-favorites-page';
-import Homepage from '../homepage/homepage';
+import { Homepage} from '@react-monorepo/movies-feature-home-page';
 import { Root } from './root';
 import { MovieDetails } from '@react-monorepo/movies-feature-detail-page';
 import { GuardedRoute } from '@react-monorepo/shared-auth-feature-guarded-route';
