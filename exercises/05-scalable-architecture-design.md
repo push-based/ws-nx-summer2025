@@ -157,16 +157,16 @@ The last remaining code to migrate into a library is the homepage feature.
 
 Tasks:  
 
-* Create a new library called `movie-feature-home-page` in `libs/movies/feature-home-page`
+* Create a new library called `movies-feature-home-page` in `libs/movies/feature-home-page`
 * move code from `apps/movies/src/app/homepage` to the new library
 * adjust exports in `libs/movies/feature-home-page/src/index.ts`
 * adjust imports in `apps/movies/src/app/routes/routes.tsx`
 
 <details>
-  <summary>Library creation for movie-feature-home-page</summary>
+  <summary>Library creation for movies-feature-home-page</summary>
 
 ```bash
-npx nx generate @nx/react:library libs/movies/feature-home-page --name movie-feature-home-page
+npx nx generate @nx/react:library libs/movies/feature-home-page --name movies-feature-home-page
 ```
 
 </details>
@@ -174,7 +174,7 @@ npx nx generate @nx/react:library libs/movies/feature-home-page --name movie-fea
 Now you should notice that you got a new folder in `libs/movies/feature-home-page`, containing a project.json and other
 configuration files.
 
-You also see the `tsconfig.base.json` being adjusted, it now contains a new path configuration for the new library: `@react-monorepo/movie-feature-home-page`.
+You also see the `tsconfig.base.json` being adjusted, it now contains a new path configuration for the new library: `@react-monorepo/movies-feature-home-page`.
 
 <details>
   <summary>move code from `apps/movies/src/app/homepage` to the new library </summary>
@@ -196,7 +196,10 @@ You also see the `tsconfig.base.json` being adjusted, it now contains a new path
 ```ts
 // libs/movies/feature-home-page/src/index.ts
 
-export { Homepage } from './homepage';
+import Homepage from './homepage';
+
+export { Homepage };
+
 
 ```
 
@@ -208,7 +211,7 @@ export { Homepage } from './homepage';
 ```ts
 // apps/movies/src/app/routes/routes.tsx
 
-import { Homepage } from '@react-monorepo/movie-feature-home-page';
+import { Homepage } from '@react-monorepo/movies-feature-home-page';
 
 ```
 
