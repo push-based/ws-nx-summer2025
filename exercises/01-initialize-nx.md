@@ -35,6 +35,12 @@ npm install
 
 Now let's try running some tasks. To build the `animals` package, use the `build` npm script:
 
+```bash
+npm run build -w @tuskdesign/animals
+```
+
+Which should output:
+
 ```text {% command="npm run build -w @tuskdesign/animals" path="~/tuskydesigns" %}
 > @tuskdesign/animals@1.2.0 build
 > tsc --build tsconfig.lib.json
@@ -42,12 +48,24 @@ Now let's try running some tasks. To build the `animals` package, use the `build
 
 The repository is set up using [TypeScript project references](https://www.typescriptlang.org/docs/handbook/project-references.html) so building the `zoo` package will automatically build all its dependencies.
 
+```bash
+npm run build -w @tuskdesign/zoo
+```
+
+Which should output:
+
 ```text {% command="npm run build -w @tuskdesign/zoo" path="~/tuskydesigns" %}
 > @tuskdesign/zoo@1.2.0 build
 > tsc --build tsconfig.lib.json
 ```
 
 To run the `zoo` package use the `serve` script:
+
+```bash
+npm run serve -w @tuskdesign/zoo
+```
+
+Which should output:
 
 ```text {% command="npm run serve -w @tuskdesign/zoo" path="~/tuskydesigns" %}
 > @tuskdesign/zoo@1.2.0 serve
