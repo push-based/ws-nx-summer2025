@@ -1,1 +1,5 @@
-export interface DeployExecutorSchema {} // eslint-disable-line
+
+export interface DeployExecutorSchema {
+    dockerFile: string;
+    tag: string;
+}
