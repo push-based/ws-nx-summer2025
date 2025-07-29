@@ -24,10 +24,14 @@
       "@react-monorepo/movies-feature-favorites-page": [
         "libs/movies/feature-favorites-page/src/index.ts"
       ],
+      "@react-monorepo/movies-feature-home-page": [
+        "libs/movies/feature-home-page/src/index.ts"
+      ],
       "@react-monorepo/movies-feature-navbar": [
         "libs/movies/feature-navbar/src/index.ts"
       ],
       "@react-monorepo/movies-ui": ["libs/movies/ui/src/index.ts"],
+      "@react-monorepo/movies-utils": ["libs/movies/utils/src/index.ts"],
       "@react-monorepo/shared-auth-data-access": [
         "libs/shared/auth/data-access/src/index.ts"
       ],
@@ -44,7 +48,8 @@
         "libs/shared/feature-error-page/src/index.ts"
       ],
       "@react-monorepo/shared-models": ["libs/shared/models/src/index.ts"],
-      "@react-monorepo/shared-ui": ["libs/shared/ui/src/index.ts"]
+      "@react-monorepo/shared-ui": ["libs/shared/ui/src/index.ts"],
+      "@react-monorepo/workspace-tools": ["tools/workspace/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
