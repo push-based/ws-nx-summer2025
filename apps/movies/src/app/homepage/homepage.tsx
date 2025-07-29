@@ -5,7 +5,7 @@ import { MovieCard } from '@react-monorepo/movies-ui';
 import { AuthContext } from '@react-monorepo/shared-auth-data-access';
 import { useFavorites, useMovies } from '@react-monorepo/movies-data-access';
 import { useSearchParams } from 'react-router-dom';
-import { searchMoviesByTitle } from '@react-monorepo/movies-utils';
+import { searchMoviesByTitle } from '../utils/search-movies-by-title.util';
 
 export default function Homepage() {
   const { user } = useContext(AuthContext);

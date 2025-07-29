@@ -26,9 +26,24 @@
         "serveStaticTargetName": "serve-static"
       }
     },
-    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
-    { "plugin": "@nx/playwright/plugin", "options": { "targetName": "e2e" } },
-    { "plugin": "@nx/jest/plugin", "options": { "targetName": "test" } },
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "plugin": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "e2e"
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    },
     {
       "plugin": "@nx/react/router-plugin",
       "options": {
@@ -42,10 +57,18 @@
     }
   ],
   "targetDefaults": {
-    "build": { "cache": true },
-    "test": { "cache": true },
-    "lint": { "cache": true },
-    "e2e-ci--**/**": { "dependsOn": ["^build"] }
+    "build": {
+      "cache": true
+    },
+    "test": {
+      "cache": true
+    },
+    "lint": {
+      "cache": true
+    },
+    "e2e-ci--**/**": {
+      "dependsOn": ["^build"]
+    }
   },
   "generators": {
     "@nx/react": {
@@ -55,7 +78,9 @@
         "linter": "eslint",
         "bundler": "vite"
       },
-      "component": { "style": "scss" },
+      "component": {
+        "style": "scss"
+      },
       "library": {
         "style": "scss",
         "linter": "eslint",

@@ -24,14 +24,10 @@
       "@react-monorepo/movies-feature-favorites-page": [
         "libs/movies/feature-favorites-page/src/index.ts"
       ],
-      "@react-monorepo/movies-feature-home-page": [
-        "libs/movies/feature-movie-home-page/src/index.ts"
-      ],
       "@react-monorepo/movies-feature-navbar": [
         "libs/movies/feature-navbar/src/index.ts"
       ],
       "@react-monorepo/movies-ui": ["libs/movies/ui/src/index.ts"],
-      "@react-monorepo/movies-utils": ["libs/movies/utils/src/index.ts"],
       "@react-monorepo/shared-auth-data-access": [
         "libs/shared/auth/data-access/src/index.ts"
       ],

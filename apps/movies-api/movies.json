@@ -1,5 +1,10 @@
 {
-  "login": [],
+  "login": [
+    {
+      "id": "4eea",
+      "email": "test@gmail.com"
+    }
+  ],
   "favorites": [],
   "history": [],
   "movie": [

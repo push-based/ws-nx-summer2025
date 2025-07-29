@@ -1,6 +1,6 @@
 ---
 
-**[← Previous: Movies App Project Setup](./04-project-setup.md) | [Next: Custom Plugins →](./07-custom-plugin.md)**
+**[← Previous: Movies App Project Setup](./05-scalable-architecture-design.md) | [Next: Custom Plugins →](./07-custom-plugin.md)**
 
 ---
 
@@ -113,10 +113,10 @@ For each project, go ahead and assign the proper tag into the project.json file.
 
 > [!NOTE]
 > There are only a couple projects, that need to be adjusted:
-> * movies-ui 
 > * movies-feature-detail-page
+> * movies-feature-homepage
 > * movies-utils
-> * shared-auth-ui-not-authenticated-page
+> * shared-ui
 
 Follow the pattern as described below.
 
@@ -138,10 +138,10 @@ Follow the pattern as described below.
 <details>
   <summary>Solution</summary>
 
-* movies-ui -> `["scope:movies", "type:ui"]`
 * movies-feature-detail-page -> `["scope:movies", "type:feature"]`
+* movies-feature-homepage -> `["scope:movies", "type:feature"]`
 * movies-util -> `["scope:movies", "type:util"]`
-* shared-auth-ui-not-authenticated-page -> `["scope:shared", "type:ui"]`
+* shared-ui -> `["scope:shared", "type:ui"]`
 
 </details>
 
