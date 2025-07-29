@@ -212,6 +212,9 @@ Congratulations! Please make sure to also run your executor:
 npx nx run movies:deploy
 ```
 
+---
+👏 Lower your hand to show you've finished the exercise. 👏
+---
 
 ## 5.2 OPTIONAL: The full thing, with error checking!
 
@@ -359,10 +362,6 @@ npx nx run movies:deploy
 ```
 
 You should see all the outputs from docker as before!
-
----
-👏 Lower your hand to show you've finished the exercise. 👏
----
 
 ## 🏃‍♂️‍➡️ Action Steps
 

@@ -29,7 +29,7 @@ First parameter is obvious. If you run `nx build movies-app`, Nx will store the 
 
 Each tasks is defined by list of inputs that define the context upon which we run the task command. Inputs can be defined in `nx.json` as `targetDefaults`, in `project.json` and `package.json` target's configuration or any combination of the above. The best way to get the full list of inputs is by using `Nx Console` IDE extension or by running `nx graph`.
 
-![Lint task inputs](../assets/lint-inputs.png)
+![Lint task inputs](./assets/lint-inputs.png)
 
 Some files are explicitly specified, while others are represented by `namedInputs`. Named inputs are variables that encapsulate common file groups. The two typical ones are:
 - `default` - includes all the files in the project
