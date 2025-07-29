@@ -27,8 +27,8 @@ npm run start
 
 ## Workshop Information
 
-* [ws info doc]()
-* [slides]()
+* [ws info doc](https://docs.google.com/document/d/1UMRyd-Wqe17OYAniDvjnIGAFSrYmqjTgKVdcxlfrCTo/edit?usp=sharing)
+* [slides](https://drive.google.com/drive/folders/1pxhhWGSvKQ8mbRCp4_UAciuaAXDnTcYC?usp=sharing)
 
 > [!NOTE]
 > The exercises are named in the following pattern:
