@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "add-dockerfile": {
+      "factory": "./src/generators/add-dockerfile",
+      "schema": "./src/generators/schema.json",
+      "description": "add-dockerfile generator"
+    }
+  }
+}
