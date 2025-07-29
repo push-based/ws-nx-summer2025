@@ -28,6 +28,7 @@
         "libs/movies/feature-navbar/src/index.ts"
       ],
       "@react-monorepo/movies-ui": ["libs/movies/ui/src/index.ts"],
+      "@react-monorepo/movies-utils": ["libs/movies/utils/src/index.ts"],
       "@react-monorepo/shared-auth-data-access": [
         "libs/shared/auth/data-access/src/index.ts"
       ],
