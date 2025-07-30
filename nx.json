@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "defaultBase": "origin/main",
+  "defaultBase": "origin/some-branch",
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
@@ -26,13 +26,7 @@
         "serveStaticTargetName": "serve-static"
       }
     },
-    {
-      "plugin": "@react-monorepo/workspace-tools",
-      "options": {
-        "buildTargetName": "build",
-        "deployTargetName": "deploy"
-      }
-    },
+    
     {
       "plugin": "@nx/eslint/plugin",
       "options": {
