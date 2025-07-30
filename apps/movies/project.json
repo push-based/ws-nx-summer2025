@@ -18,6 +18,12 @@
     },
     "build": {
       "inputs": [{"env": "MY_SECRET" }]
+    },
+    "flaky": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "./flaky.sh"
+      }
     }
   }
 }
