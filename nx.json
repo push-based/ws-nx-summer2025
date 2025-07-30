@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "defaultBase": "origin/tcapps-exercises",
+  "defaultBase": "origin/summer-2025-shadowbox-dev",
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
@@ -74,7 +74,8 @@
       "cache": true
     },
     "e2e-ci--**/**": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "parallelism": false
     },
     "@nx/js:tsc": {
       "cache": true,
