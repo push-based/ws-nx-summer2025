@@ -5,7 +5,7 @@ export function Root() {
   return (
     <>
       <Navbar />
-      <div style={{ padding: '20px' }}>
+      <div style={{ padding: '30px' }}>
         <Outlet />
       </div>
     </>
