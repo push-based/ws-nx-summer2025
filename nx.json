@@ -54,6 +54,13 @@
         "buildDepsTargetName": "build-deps",
         "typecheckTargetName": "typecheck"
       }
+    },
+    {
+      "plugin": "@react-monorepo/workspace-tools",
+      "options": {
+        "buildTargetName": "build",
+        "deployTargetName": "deploy-auto"
+      }
     }
   ],
   "targetDefaults": {
