@@ -73,8 +73,9 @@ jobs:
         with:
           node-version: 24
           cache: 'npm'
+
       - name: Initialize the Nx Cloud distributed CI run
-        run: npx nx-cloud start-ci-run --distribute-on="manual"
+        run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js"
 
       - run: npm ci
 
