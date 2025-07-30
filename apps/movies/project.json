@@ -17,7 +17,7 @@
       "dependsOn": ["movies-api:serve"]
     },
     "build": {
-      "inputs": [{ "runtime": "date" }]
+      "inputs": [{ "env": "MY_SECRET" }]
     }
   }
 }
