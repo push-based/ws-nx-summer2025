@@ -41,4 +41,4 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
 
       - name: Run commands in parallel
-        run: npx nx affected -t lint test build e2e
+        run: npx nx affected -t lint test build e2e-ci
