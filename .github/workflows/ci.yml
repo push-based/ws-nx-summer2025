@@ -8,21 +8,21 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
-     steps:
+    steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Initialize the Nx Cloud distributed CI run
-        run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js"
-        
+        run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js" 
+          
       - uses: actions/setup-node@v3
         with:
           node-version: 24
           cache: 'npm'
-      - run: npm ci
 
-      - name: Run commands in parallel
-        run: npx nx affected -t lint build --base=HEAD^
+      - run: npm ci
+      - run: npx nx affected -t lint build --base=HEAD^
+
 
 

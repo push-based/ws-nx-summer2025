@@ -4,7 +4,7 @@ export const searchMoviesByTitle = (
   movies: Movie[],
   query?: string | null
 ): Movie[] => {
-  console.log('searchMoviesByTitles', movies, query);
+  console.log('searchMoviesByTitle', movies, query);
   if (!query || query?.length === 0) {
     return movies;
   }
