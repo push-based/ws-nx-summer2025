@@ -2,7 +2,7 @@
 
 ## Installation Instructions
 
-**System Requirements**
+**System Requirementss**
 
 * `node > 22`
 * `npm > 10`
