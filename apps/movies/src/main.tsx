@@ -5,6 +5,7 @@ import App from './app/app';
 import { AuthProvider } from '@react-monorepo/shared-auth-data-access';
 import { MovieProvider } from '@react-monorepo/movies-data-access';
 
+//flaky 2
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
