@@ -24,7 +24,11 @@ test('loads movie details correctly', async ({ page }) => {
 
   // Check if the title is displayed correctly
   const title = page.locator('h4');
-  await expect(title).toHaveText('Grave of the Fireflies (1988)');
+  // await expect(title).toHaveText('Grave of the Fireflies (1988)');
+
+
+  const randNumber = Math.floor(Math.random() * 2000);
+  await expect(title).toHaveText(`Grave of the Fireflies (${randNumber})`);
 
   // Check if the overview/description is displayed correctly
   const overview = page.locator('p').first();
