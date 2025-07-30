@@ -20,6 +20,8 @@ export default function Homepage() {
     [movies, search]
   );
 
+  console.log('heres a movie!');
+
   return filteredMovies.length === 0 ? (
     <h1>These are not the droids you are looking for</h1>
   ) : (
