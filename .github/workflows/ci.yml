@@ -37,9 +37,10 @@ jobs:
           node-version: 24
           cache: 'npm'
       - run: npm ci --legacy-peer-deps
+      - run: npx playwright install --with-deps
 
-      - name: Run commands in parallel
-        run: npx nx affected -t lint build --base=HEAD^
+      - run: npx nx affected -t lint build deploy --base=HEAD^
+      - run: npx nx affected -t e2e-ci --parallel 1
 
       - name: Stop Nx Cloud DTE agents
         if: ${{ always() }}
