@@ -156,34 +156,4 @@ describe('Flaky Tests Suite', () => {
       expect((error as Error).message).toBe('Connection timeout');
     }
   });
-
-  test('flaky test with UI rendering race condition', async () => {
-    render(
-      <MemoryRouter>
-        <App />
-      </MemoryRouter>
-    );
-
-    // Simulate UI updates that might not be synchronized
-    const updateUI = () => {
-      return new Promise(resolve => {
-        setTimeout(() => {
-          // Simulate DOM update
-          const div = document.createElement('div');
-          div.textContent = 'Updated';
-          document.body.appendChild(div);
-          resolve(true);
-        }, Math.random() * 100);
-      });
-    };
-
-    // Start multiple UI updates
-    const promises = [updateUI(), updateUI(), updateUI()];
-    
-    await Promise.all(promises);
-    
-    // This will sometimes fail because updates might not be complete
-    const elements = document.querySelectorAll('div');
-    expect(elements.length).toBeGreaterThan(0);
-  });
 }); 
