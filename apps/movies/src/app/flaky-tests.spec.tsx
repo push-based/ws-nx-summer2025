@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { App } from './app';
 
@@ -52,7 +52,7 @@ describe('Flaky Tests Suite', () => {
       expect(data.data).toBe('success');
     } catch (error) {
       // This will sometimes throw due to the random failure
-      expect(error.message).toBe('Network error');
+      expect((error as Error).message).toBe('Network error');
     }
   });
 
@@ -128,7 +128,7 @@ describe('Flaky Tests Suite', () => {
 
     // This will sometimes throw an error
     expect(() => {
-      mockReadFile().then(content => {
+      mockReadFile().then((content: string) => {
         expect(content).toBe('file content');
       });
     }).not.toThrow();
@@ -153,7 +153,7 @@ describe('Flaky Tests Suite', () => {
       const result = await mockQuery();
       expect(result).toHaveLength(1);
     } catch (error) {
-      expect(error.message).toBe('Connection timeout');
+      expect((error as Error).message).toBe('Connection timeout');
     }
   });
 
