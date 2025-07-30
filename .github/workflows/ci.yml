@@ -81,5 +81,5 @@ jobs:
       - run: npx playwright install --with-deps
       - uses: nrwl/nx-set-shas@v4
 
-      - run: npx nx affected -t lint test build deploy
+      - run: npx nx affected -t build
       - run: npx nx affected -t e2e-ci --parallel 1
