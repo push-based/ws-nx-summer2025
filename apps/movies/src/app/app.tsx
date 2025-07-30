@@ -2,7 +2,7 @@ import { RouterProvider } from 'react-router-dom';
 import { router } from './routes/routes';
 
 export function App() {
-  console.log('heres a movie 2!');
+  console.log('heres a movie 3!');
   return <RouterProvider router={router} />;
 }
 
