@@ -1,8 +1,8 @@
 import { RouterProvider } from 'react-router-dom';
 import { router } from './routes/routes';
-import { useDoesntExist } from 'react';
 
 export function App() {
+  console.log('heres a movie!');
   return <RouterProvider router={router} />;
 }
 
