@@ -75,7 +75,8 @@
       "cache": true
     },
     "e2e-ci--**/**": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "parallelism": false
     },
     "@nx/js:tsc": {
       "cache": true,
