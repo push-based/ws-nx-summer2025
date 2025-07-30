@@ -38,7 +38,7 @@ test('flaky test example', async ({ page }) => {
 
   // Randomly fail this test to demonstrate flaky behavior
   if (Math.random() < 0.5) {
-    throw new Error('This is a flaky test that randomly fails.');
+    throw new Error('This is a flaky test that fails randomly.');
   }
 
   // If it doesn't fail, check if the title is displayed correctly
