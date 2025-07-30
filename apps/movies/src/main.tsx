@@ -4,7 +4,11 @@ import * as ReactDOM from 'react-dom/client';
 import App from './app/app';
 import { AuthProvider } from '@react-monorepo/shared-auth-data-access';
 import { MovieProvider } from '@react-monorepo/movies-data-access';
-
+/**
+ * testing checking and permissions
+ *  testing checking and permissions123
+ * @returns 
+ */
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
