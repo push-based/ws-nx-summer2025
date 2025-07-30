@@ -16,6 +16,8 @@ test('loads movie details correctly', async ({ page }) => {
   // Navigate to the movie detail page
   page.goto('/movies/12477');
 
+  
+
   // Wait for the movie details to be loaded
   page.waitForResponse(
     (response) =>
@@ -28,5 +30,10 @@ test('loads movie details correctly', async ({ page }) => {
 
   // Check if the overview/description is displayed correctly
   const overview = page.locator('p').first();
-  await expect(overview).toContainText('In the final months of World War II');
+  // Introduce flakiness by randomly failing the assertion
+  if (Math.random() < 0.5) {
+    await expect(overview).toContainText('In the final months of World War II');
+  } else {
+    await expect(overview).toContainText('Some incorrect text to make it flakey');
+  }
 });
