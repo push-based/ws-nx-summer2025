@@ -21,6 +21,8 @@ test('loads movie details correctly', async ({ page }) => {
     (response) =>
       response.url().includes('/movies/12477') && response.status() === 200
   );
+  console.log(Math.random())
+  expect(Math.random() < 0.5).toBe(true);
 
   // Check if the title is displayed correctly
   const title = page.locator('h4');
