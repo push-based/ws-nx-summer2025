@@ -19,4 +19,5 @@ export interface Movie {
   imgWidth: number;
   imgHeight: number;
   imgRatio: number;
+  description?: string;
 }
