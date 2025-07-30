@@ -1,0 +1,20 @@
+name: Main CI
+on:
+  push:
+    branches:
+      - lego4150:main    # normally main
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 24
+          cache: 'npm'
+
+      - run: npm ci
+      - run: npx nx affected -t build lint --base=HEAD^    # normally wouldn't do HEAD
