@@ -16,6 +16,8 @@ test('loads movie details correctly', async ({ page }) => {
   // Navigate to the movie detail page
   page.goto('/movies/12477');
 
+  const randomValue = Math.floor(Math.random() * 2) + 1;
+  expect(randomValue).toBe(1);
   // Wait for the movie details to be loaded
   page.waitForResponse(
     (response) =>
