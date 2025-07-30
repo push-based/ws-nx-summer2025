@@ -144,7 +144,7 @@ executor!
       "executor": "@react-monorepo/workspace-tools:deploy",
       "dependsOn": ["build"],
       "options": {
-        "dockerFile": "tools/deploy/deploy.Dockerfile",
+        "dockerFile": "tools/deploy/Dockerfile",
         "tag": "ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
       }
     }
@@ -314,7 +314,7 @@ apps/movies/project.json:
     "deploy": {
       "executor": "@react-monorepo/workspace-tools:deploy",
       "options": {
-        "dockerFile": "tools/deploy/deploy.Dockerfile",
+        "dockerFile": "tools/deploy/Dockerfile",
         "tag": "ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
       }
     }
