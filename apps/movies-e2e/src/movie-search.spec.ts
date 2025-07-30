@@ -27,7 +27,7 @@ test('searches for movies and displays results', async ({ page }) => {
   await expect(noResultsMessage).toBeHidden();
 });
 
-test('shows "no results" message when search returns empty', async ({
+test('shows "no results" message when search returns empty result', async ({
   page,
 }) => {
   // Navigate to the search page with a query that will return no results

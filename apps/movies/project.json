@@ -23,5 +23,10 @@
     "preview": {
       "dependsOn": ["movies-api:serve"]
     }
+  },
+  "targets": {
+    "build": {
+       "inputs": [{ "env": "MY_SECRET" }]
+    }
   }
 }
