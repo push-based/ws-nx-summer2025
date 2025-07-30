@@ -30,3 +30,18 @@ test('loads movie details correctly', async ({ page }) => {
   const overview = page.locator('p').first();
   await expect(overview).toContainText('In the final months of World War II');
 });
+
+// create flaky task for demonstration purposes
+test('flaky test example', async ({ page }) => {
+  // Navigate to the movie detail page
+  page.goto('/movies/12477');
+
+  // Randomly fail this test to demonstrate flaky behavior
+  if (Math.random() < 0.5) {
+    throw new Error('This is a flaky test that randomly fails.');
+  }
+
+  // If it doesn't fail, check if the title is displayed correctly
+  const title = page.locator('h4');
+  await expect(title).toHaveText('Grave of the Fireflies (1988)');
+});
