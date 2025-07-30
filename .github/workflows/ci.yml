@@ -17,4 +17,4 @@ jobs:
           cache: 'npm'
 
       - run: npm ci --force --legacy-peer-deps
-      - run: npx nx affect -t lint build --base=HEAD^
+      - run: npx nx affected -t lint build --base=HEAD^
