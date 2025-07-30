@@ -71,7 +71,10 @@
       "cache": true
     },
     "test": {
-      "cache": true
+      "cache": true,
+      "options": {
+        "passWithNoTests": true
+      }
     },
     "lint": {
       "cache": true
