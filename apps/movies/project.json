@@ -13,14 +13,6 @@
         }
       ]
     },
-    "deploy": {
-      "executor": "@react-monorepo/workspace-tools:deploy",
-      "dependsOn": ["build"],
-      "options": {
-        "dockerFile": "tools/deploy/deploy.Dockerfile",
-        "tag": "ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
-      }
-    },
     "preview": {
       "dependsOn": ["movies-api:serve"]
     }
