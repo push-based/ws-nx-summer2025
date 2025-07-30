@@ -88,7 +88,7 @@ This output is unfortunately not ergonomic, but luckily Nx Cloud UI has a more c
 
 On your CIPE select a task whose cache status you'd like to investigate, click on `Compare to Similar Tasks` button and then select a task from the list to compare them.
 
-![Compare to similar task](../assets/compare-to-similar-tasks.png)
+![Compare to similar task](./assets/compare-to-similar-tasks.png)
 
 The result will show the inputs of those two task runs next to each other.
 
