@@ -1,11 +1,11 @@
-# React Nx Workshop Summer 2025
+# React Nx Workshop Summer 2025!
 
 ## Installation Instructions
 
 **System Requirements**
 
-* `node > 22`
-* `npm > 10`
+- `node > 22`
+- `npm > 10`
 
 **Clone and install**
 
@@ -27,8 +27,8 @@ npm run start
 
 ## Workshop Information
 
-* [ws info doc](https://docs.google.com/document/d/1UMRyd-Wqe17OYAniDvjnIGAFSrYmqjTgKVdcxlfrCTo/edit?usp=sharing)
-* [slides](https://drive.google.com/drive/folders/1pxhhWGSvKQ8mbRCp4_UAciuaAXDnTcYC?usp=sharing)
+- [ws info doc](https://docs.google.com/document/d/1UMRyd-Wqe17OYAniDvjnIGAFSrYmqjTgKVdcxlfrCTo/edit?usp=sharing)
+- [slides](https://drive.google.com/drive/folders/1pxhhWGSvKQ8mbRCp4_UAciuaAXDnTcYC?usp=sharing)
 
 > [!NOTE]
 > The exercises are named in the following pattern:
@@ -61,5 +61,3 @@ npm run start
 8. [Nx Atomizer](./exercises/18-atomizer.md)
 9. [Flaky Task Detection](./exercises/19-flaky-tasks.md)
 10. [Nx Import, Powerpack & Conformance](./exercises/20-bonus.md)
-
-
