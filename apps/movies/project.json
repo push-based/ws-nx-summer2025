@@ -10,8 +10,12 @@
       "dependsOn": [{ "projects": ["movies-api"], "target": "serve" }]
     },
     "deploy": {
+       "executor": "@react-monorepo/workspace-tools:deploy",
       "dependsOn": ["build"],
-      "command": "docker build -f tools/deploy/deploy.Dockerfile --build-arg='APP_NAME=movies' . -t ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
+      "options": {
+        "dockerFile": "tools/deploy/deploy.Dockerfile",
+        "tag": "ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
+      }
     },
     "preview": {
       "dependsOn": ["movies-api:serve"]

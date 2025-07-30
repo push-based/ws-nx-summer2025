@@ -1,0 +1,13 @@
+{
+  "properties": {
+    "dockerFile": {
+      "type": "string",
+      "description": "path to dockerfile"
+    },
+    "tag": {
+      "type": "string",
+      "description": "tag for the docker container"
+    }
+  },
+  "required": ["dockerFile", "tag"]
+}
