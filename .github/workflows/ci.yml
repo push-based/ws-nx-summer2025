@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - f/workspace/nv/nx-cloud
+      - main
 
 jobs:
   main:
