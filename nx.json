@@ -17,6 +17,13 @@
   },
   "plugins": [
     {
+      "plugin": "@react-monorepo/workspace-tools",
+      "options": {
+        "buildTargetName": "build",
+        "deployTargetName": "deploy"
+      }
+    },
+    {
       "plugin": "@nx/vite/plugin",
       "options": {
         "buildTargetName": "build",
