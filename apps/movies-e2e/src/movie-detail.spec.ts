@@ -14,7 +14,14 @@ test.beforeEach(async ({ page }) => {
 
 test('loads movie details correctly', async ({ page }) => {
   // Navigate to the movie detail page
-  page.goto('/movies/12477');
+  const test = Math.random();
+  let navPath = 11111;
+
+  if(test > 0.5) {
+     navPath = 12477;
+  }
+
+  page.goto(`/movies/${navPath}`);
 
   // Wait for the movie details to be loaded
   page.waitForResponse(

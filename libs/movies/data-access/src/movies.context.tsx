@@ -45,6 +45,7 @@ export function MovieProvider({ children }: { children: React.ReactNode }) {
       body: JSON.stringify({ movieId: movie.id }),
     });
     const result = (await response.json()) as { id: string; movieId: string };
+    const test = "Making a change to affect NX Cloud PART 2"
     setFavorites({ ...favoritesIds, [movie.id]: result.id });
   };
 
