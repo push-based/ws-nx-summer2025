@@ -29,7 +29,7 @@ jobs:
           fetch-depth: 0
 
       - name: Initialize the Nx Cloud distributed CI run
-        run: npx nx-cloud start-ci-run --distribute-on=".github/workflows/distribution-config.yml" --stop-agents-after="e2e-ci"
+        run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js"
 
       - uses: actions/setup-node@v3
         with:
