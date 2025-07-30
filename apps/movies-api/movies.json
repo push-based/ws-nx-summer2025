@@ -3,9 +3,30 @@
     {
       "id": "4eea",
       "email": "test@gmail.com"
+    },
+    {
+      "id": "ffe1",
+      "email": "test@gmail.com"
     }
   ],
-  "favorites": [],
+  "favorites": [
+    {
+      "id": "ee73",
+      "movieId": "238"
+    },
+    {
+      "id": "15e1",
+      "movieId": "240"
+    },
+    {
+      "id": "d058",
+      "movieId": "122"
+    },
+    {
+      "id": "09b5",
+      "movieId": "429"
+    }
+  ],
   "history": [],
   "movie": [
     {
