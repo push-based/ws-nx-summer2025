@@ -2,7 +2,7 @@ name: CI
 on:
   push:
     branches:
-      - YOUR_BRANCH_NAME # 👈️👈️👈️👈️👈️👈️👈️ IMPORTANT
+      - clutchcityred # 👈️👈️👈️👈️👈️👈️👈️ IMPORTANT
 
 jobs:
   main:
@@ -17,3 +17,5 @@ jobs:
           cache: 'npm'
 
       - run: npm ci --force
+
+      - run: npx nx affected -t lint build --base=HEAD^
