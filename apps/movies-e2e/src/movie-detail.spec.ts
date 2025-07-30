@@ -16,12 +16,6 @@ test('loads movie details correctly', async ({ page }) => {
   // Navigate to the movie detail page
   page.goto('/movies/12477');
 
-  // Wait for the movie details to be loaded
-  page.waitForResponse(
-    (response) =>
-      response.url().includes('/movies/12477') && response.status() === 200
-  );
-
   // Check if the title is displayed correctly
   const title = page.locator('h4');
   await expect(title).toHaveText('Grave of the Fireflies (1988)');

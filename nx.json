@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "defaultBase": "origin/main",
+  "defaultBase": "zoe-gonzales",
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
@@ -13,9 +13,16 @@
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s"
     ],
-    "sharedGlobals": []
+    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
   "plugins": [
+    {
+      "plugin": "@react-monorepo/workspace-tools",
+      "options": {
+        "buildTargetName": "build",
+        "deployTargetName": "deploy"
+      }
+    },
     {
       "plugin": "@nx/vite/plugin",
       "options": {
@@ -67,7 +74,13 @@
       "cache": true
     },
     "e2e-ci--**/**": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "parallelism": false
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "generators": {
