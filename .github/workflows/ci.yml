@@ -19,31 +19,31 @@ concurrency:
   cancel-in-progress: ${{ github.event_name != 'push' }}
 
 jobs:
-  dte_agents:
-    name: DTE AGENT ${{ matrix.agent }}
-    env:
-      NX_CLOUD_DISTRIBUTED_EXECUTION: true
-      NX_DISTRIBUTED_TASK_EXECUTION: true
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-
-    strategy:
-      matrix:
-        agent: [1, 2, 3]
-
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 24
-          cache: 'npm'
-
-      - run: npm ci --force --legacy-peer-deps
-
-      - name: Start Nx Cloud DTE Agent
-        run: npx nx-cloud start-agent
-        env:
-          NX_AGENT_NAME: ${{ matrix.agent }}
+#  dte_agents:
+#    name: DTE AGENT ${{ matrix.agent }}
+#    env:
+#      NX_CLOUD_DISTRIBUTED_EXECUTION: true
+#      NX_DISTRIBUTED_TASK_EXECUTION: true
+#    runs-on: ubuntu-latest
+#    timeout-minutes: 20
+#
+#    strategy:
+#      matrix:
+#        agent: [1, 2, 3]
+#
+#    steps:
+#      - uses: actions/checkout@v4
+#      - uses: actions/setup-node@v3
+#        with:
+#          node-version: 24
+#          cache: 'npm'
+#
+#      - run: npm ci --force --legacy-peer-deps
+#
+#      - name: Start Nx Cloud DTE Agent
+#        run: npx nx-cloud start-agent
+#        env:
+#          NX_AGENT_NAME: ${{ matrix.agent }}
 
   main:
     name: DTE Coordinator
@@ -60,14 +60,14 @@ jobs:
           node-version: 24
           cache: 'npm'
 
+      - name: Initialize the Nx Cloud distributed CI run
+        run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js"
+
       - run: npm ci --force --legacy-peer-deps
 
-      - name: Initialize the Nx Cloud distributed CI run
-        run: npx nx-cloud start-ci-run --distribute-on="manual"
-
       - run: npx nx affected -t lint build --base=HEAD^
-
-      - name: Stop Nx Cloud DTE agents
-        if: ${{ always() }}
-        run: npx nx-cloud stop-all-agents
+#
+#      - name: Stop Nx Cloud DTE agents
+#        if: ${{ always() }}
+#        run: npx nx-cloud stop-all-agents
 
