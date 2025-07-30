@@ -15,6 +15,9 @@
     },
     "preview": {
       "dependsOn": ["movies-api:serve"]
+    },
+    "build": {
+      "inputs": [{"env": "MY_SECRET" }]
     }
   }
 }
