@@ -3,9 +3,54 @@ on:
   push:
     branches:
       - dallas-scott-branch # 👈️👈️👈️👈️👈️👈️👈️ IMPORTANT
+      -
+concurrency:
+  # Group concurrency on workflow, then:
+  # - Is merge run? Group on branch name (`refs/heads/main`)
+  # - Is pull request? Group on pull request branch name, for example `feat/add-awesome-feature`
+  group: >-
+    ${{ github.workflow }}-${{
+      github.event_name == 'push'
+        && github.ref
+        || github.head_ref
+    }}
+  # Run merge workflows in sequence to prevent parallel deployments and releases
+  # Cancel stale pull request runs in progress for the same branch
+  cancel-in-progress: ${{ github.event_name != 'push' }}
+
 jobs:
-  main:
+  dte_agents:
+    name: DTE AGENT ${{ matrix.agent }}
+    env:
+      NX_CLOUD_DISTRIBUTED_EXECUTION: true
+      NX_DISTRIBUTED_TASK_EXECUTION: true
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    strategy:
+      matrix:
+        agent: [1, 2, 3]
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 24
+          cache: 'npm'
+
+      - run: npm ci --force --legacy-peer-deps
+
+      - name: Start Nx Cloud DTE Agent
+        run: npx nx-cloud start-agent
+        env:
+          NX_AGENT_NAME: ${{ matrix.agent }}
+
+  main:
+    name: DTE Coordinator
+    runs-on: ubuntu-latest
+    env:
+      NX_CLOUD_DISTRIBUTED_EXECUTION: true
+      NX_DISTRIBUTED_TASK_EXECUTION: true
     steps:
       - uses: actions/checkout@v4
         with:
@@ -17,4 +62,12 @@ jobs:
 
       - run: npm ci --force --legacy-peer-deps
 
+      - name: Initialize the Nx Cloud distributed CI run
+        run: npx nx-cloud start-ci-run --distribute-on="manual"
+
       - run: npx nx affected -t lint build --base=HEAD^
+
+      - name: Stop Nx Cloud DTE agents
+        if: ${{ always() }}
+        run: npx nx-cloud stop-all-agents
+
