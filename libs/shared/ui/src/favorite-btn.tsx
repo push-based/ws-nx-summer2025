@@ -9,7 +9,7 @@ export default function FavoriteButton({
   handleClick: () => void;
 }) {
   return (
-    <IconButton size="medium" color="inherit" onClick={handleClick}>
+    <IconButton size="small" color="inherit" onClick={handleClick}>
       <Favorite color={isFavorite ? 'secondary' : 'inherit'} />
     </IconButton>
   );
