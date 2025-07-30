@@ -12,7 +12,7 @@ root.render(
   <StrictMode>
     <AuthProvider>
       <MovieProvider>
-        <App />
+        <App data-testid="test" />
       </MovieProvider>
     </AuthProvider>
   </StrictMode>
