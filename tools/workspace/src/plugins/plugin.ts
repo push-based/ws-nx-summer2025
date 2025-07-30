@@ -70,7 +70,7 @@ export const createNodesV2: CreateNodesV2<Partial<DeployPluginOptions>> = [
             cache: true,
             dependsOn: [buildTargetName],
             inputs: [
-              dockerFilePath,
+              `{workspaceRoot}/${dockerFilePath}`,
               {
                 dependentTasksOutputFiles: '**/dist/**/*',
                 transitive: true,
