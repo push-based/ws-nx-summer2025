@@ -1,0 +1,20 @@
+name: CI
+on:
+  push:
+    branches:
+      - sterlingmccall # 👈️👈️👈️👈️👈️👈️👈️ IMPORTANT
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - run: npm ci --omit-package-lock-resolve
+      - run: npx nx affected -t lint build --base=HEAD^
