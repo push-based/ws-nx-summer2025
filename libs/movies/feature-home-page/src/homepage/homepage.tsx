@@ -26,7 +26,7 @@ export default function Homepage() {
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         {filteredMovies.map((movie) => (
-          <Grid item xs={12} sm={6} md={3} key={movie.title}>
+          <Grid item xs={18} sm={6} md={3} key={movie.title}>
             <MovieCard
               movie={movie}
               showActions={!!user}
