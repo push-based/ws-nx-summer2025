@@ -13,6 +13,11 @@ describe('MovieCard', () => {
   } as Movie;
 
   test('renders movie details correctly', () => {
+    // Flaky test: randomly fails 50% of the time
+    if (Math.random() < 0.5) {
+      throw new Error('Random test failure - this is a flaky test');
+    }
+
     render(
       <MemoryRouter>
         <MovieCard
