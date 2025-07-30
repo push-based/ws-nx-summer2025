@@ -29,4 +29,5 @@ test('loads movie details correctly', async ({ page }) => {
   // Check if the overview/description is displayed correctly
   const overview = page.locator('p').first();
   await expect(overview).toContainText('In the final months of World War II');
+  expect(Math.floor(Math.random() * 4)).toBe(1);
 });
