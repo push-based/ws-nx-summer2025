@@ -59,7 +59,7 @@
       "plugin": "@react-monorepo/workspace-tools",
       "options": {
         "buildTargetName": "build",
-        "deployTargetName": "deploy-auto"
+        "deployTargetName": "deploy"
       }
     }
   ],

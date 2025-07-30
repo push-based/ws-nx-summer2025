@@ -16,13 +16,6 @@
         }
       ]
     },
-    "deploy": {
-      "executor": "nx:run-commands",
-      "dependsOn": ["build"],
-      "options": {
-        "command": "docker build -f apps/movies/Dockerfile --build-arg='APP_NAME=movies' . -t ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
-      }
-    },
     "preview": {
       "dependsOn": ["movies-api:serve"]
     }
