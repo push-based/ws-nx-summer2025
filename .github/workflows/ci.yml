@@ -78,6 +78,8 @@ jobs:
         run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js"
 
       - run: npm ci
+      - run: npx playwright install --with-deps
+      - uses: nrwl/nx-set-shas@v4
 
-      - name: Run commands in parallel
-        run: npx nx affected -t lint build --base=HEAD^
+      - run: npx nx affected -t lint test build deploy
+      - run: npx nx affected -t e2e-ci --parallel 1
