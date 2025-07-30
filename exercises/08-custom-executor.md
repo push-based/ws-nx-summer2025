@@ -9,7 +9,7 @@
 ✋ Raise your hand to show you've started the exercise. ✋
 ---
 
-Learn how to create a custom executor with Nx for enhancing your project setup. 
+Learn how to create a custom executor with Nx for enhancing your project setup.
 This guide covers generating a plugin, adopting a custom configuration, and executing the executor to streamline development processes.
 
 You are going to create a custom Nx executor to run the `deploy` configuration in your project, ensuring conventions
@@ -30,7 +30,7 @@ Use the `tools/workspace/src/executors/deploy` as directory to specify it as a t
 
 ```bash
 
-npx nx g @nx/plugin:executor tools/workspace/src/executors/deploy --name deploy 
+npx nx g @nx/plugin:executor tools/workspace/src/executors/deploy --name deploy
 
 
 ```
@@ -114,7 +114,7 @@ const runExecutor: PromiseExecutor<DeployExecutorSchema> = async (
   const projectName = context.projectName;
 
   logger.log('logging something', options);
-  
+
   return {
     success: true
   }
@@ -266,7 +266,7 @@ try {
 <details>
   <summary>Full solution</summary>
 
-tools/workspace/src/executors/deploy.ts:  
+tools/workspace/src/executors/deploy.ts:
 
 ```ts
 
@@ -306,7 +306,7 @@ export default runExecutor;
 
 ```
 
-apps/movies/project.json:  
+apps/movies/project.json:
 
 ```json
 {
@@ -314,7 +314,7 @@ apps/movies/project.json:
     "deploy": {
       "executor": "@react-monorepo/workspace-tools:deploy",
       "options": {
-        "dockerFile": "tools/deploy/deploy.Dockerfile",
+        "dockerFile": "tools/deploy/Dockerfile",
         "tag": "ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
       }
     }
@@ -322,7 +322,7 @@ apps/movies/project.json:
 }
 ```
 
-tools/workspace/src/executors/schema.json:  
+tools/workspace/src/executors/schema.json:
 
 ```json
 
@@ -342,7 +342,7 @@ tools/workspace/src/executors/schema.json:
 
 ```
 
-tools/workspace/src/executors/schema.d.ts:  
+tools/workspace/src/executors/schema.d.ts:
 
 ```ts
 
