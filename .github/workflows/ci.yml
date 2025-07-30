@@ -38,8 +38,11 @@ jobs:
           cache: 'npm'
       - run: npm ci
 
+      - run: npx playwright install --with-deps
+      - uses: nrwl/nx-set-shas@v4
+
       - name: Run commands in parallel
-        run: npx nx affected -t lint build --base=HEAD^
+        run: npx nx affected -t lint build e2e --base=HEAD^
 
       - name: Stop Nx Cloud DTE agents
         if: ${{ always() }}
