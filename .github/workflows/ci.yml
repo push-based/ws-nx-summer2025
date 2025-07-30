@@ -16,5 +16,5 @@ jobs:
           node-version: 24
           cache: 'npm'
 
-      - run: npm ci --force
+      - run: npm ci --legacy-peer-deps --force
       - run: npx nx affected -t lint build --base=HEAD^
