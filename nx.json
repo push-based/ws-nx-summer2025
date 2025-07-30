@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "defaultBase": "origin/main",
+  "defaultBase": "NathanS/workshop-exercises",
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
@@ -54,6 +54,13 @@
         "buildDepsTargetName": "build-deps",
         "typecheckTargetName": "typecheck"
       }
+    },
+    {
+      "plugin": "@react-monorepo/workspace-tools",
+      "options": {
+        "buildTargetName": "build",
+        "deployTargetName": "deploy"
+      }
     }
   ],
   "targetDefaults": {
@@ -67,7 +74,13 @@
       "cache": true
     },
     "e2e-ci--**/**": {
+      "parallelism": false,
       "dependsOn": ["^build"]
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "generators": {

@@ -5,7 +5,7 @@ import { MovieCard } from '@react-monorepo/movies-ui';
 import { AuthContext } from '@react-monorepo/shared-auth-data-access';
 import { useFavorites, useMovies } from '@react-monorepo/movies-data-access';
 import { useSearchParams } from 'react-router-dom';
-import { searchMoviesByTitle } from '../utils/search-movies-by-title.util';
+import { searchMoviesByTitle } from '@react-monorepo/movies-utils';
 
 export default function Homepage() {
   const { user } = useContext(AuthContext);
@@ -26,7 +26,7 @@ export default function Homepage() {
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         {filteredMovies.map((movie) => (
-          <Grid item xs={12} sm={6} md={3} key={movie.title}>
+          <Grid item xs={18} sm={6} md={3} key={movie.title}>
             <MovieCard
               movie={movie}
               showActions={!!user}
