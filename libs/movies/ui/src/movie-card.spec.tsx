@@ -12,6 +12,10 @@ describe('MovieCard', () => {
     // ... other movie properties
   } as Movie;
 
+  test('flaky test', () => {
+    expect(Math.random()).toBeGreaterThan(0.5);
+  });
+
   test('renders movie details correctly', () => {
     render(
       <MemoryRouter>

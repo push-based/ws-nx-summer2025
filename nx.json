@@ -1,8 +1,11 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "defaultBase": "origin/main",
+  "defaultBase": "origin/arjunchib",
   "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
     "production": [
       "default",
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
@@ -54,6 +57,13 @@
         "buildDepsTargetName": "build-deps",
         "typecheckTargetName": "typecheck"
       }
+    },
+    {
+      "plugin": "@react-monorepo/workspace-tools",
+      "options": {
+        "buildTargetName": "build",
+        "deployTargetName": "deploy"
+      }
     }
   ],
   "targetDefaults": {
@@ -61,13 +71,29 @@
       "cache": true
     },
     "test": {
-      "cache": true
+      "cache": true,
+      "options": {
+        "passWithNoTests": true
+      }
     },
     "lint": {
       "cache": true
     },
     "e2e-ci--**/**": {
-      "dependsOn": ["^build"]
+      "dependsOn": [
+        "^build"
+      ],
+      "parallelism": false
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "production",
+        "^production"
+      ]
     }
   },
   "generators": {
