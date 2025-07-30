@@ -21,7 +21,7 @@ export default function Homepage() {
   );
 
   return filteredMovies.length === 0 ? (
-    <h1>These are not the droids you are looking for</h1>
+    <h1>These might be the droids you are looking for</h1>
   ) : (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
