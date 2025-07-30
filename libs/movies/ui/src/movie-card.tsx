@@ -8,6 +8,8 @@ import { IMAGE_PATH } from '@react-monorepo/shared-core-utils';
 import { Movie } from '@react-monorepo/shared-models';
 import { FavoriteButton } from '@react-monorepo/shared-ui';
 
+// something 
+
 export default function MovieCard({
   movie,
   showActions,
