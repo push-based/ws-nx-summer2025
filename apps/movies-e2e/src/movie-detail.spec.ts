@@ -16,6 +16,9 @@ test('loads movie details correctly', async ({ page }) => {
   // Navigate to the movie detail page
   page.goto('/movies/12477');
 
+  // Make it flaky
+  expect(Math.floor(Math.random() * 10000) % 2).toBe(0);
+
   // Wait for the movie details to be loaded
   page.waitForResponse(
     (response) =>
