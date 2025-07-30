@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "version": 2,
+  "title": "Deploy executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "dockerFile": {
+      "type": "string",
+      "description": "Path to the Dockerfile"
+    },
+    "tag": {
+      "type": "string",
+      "description": "A tag for the docker build to be used"
+    }
+  },
+  "required": ["dockerFile", "tag"]
+}

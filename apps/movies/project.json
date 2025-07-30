@@ -14,10 +14,11 @@
       ]
     },
     "deploy": {
-      "executor": "nx:run-commands",
+      "executor": "@react-monorepo/workspace-tools:deploy",
       "dependsOn": ["build"],
       "options": {
-        "command": "docker build -f apps/movies/deploy.Dockerfile --build-arg='APP_NAME=movies' . -t ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
+        "dockerFile": "tools/deploy/deploy.Dockerfile",
+        "tag": "ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
       }
     },
     "preview": {
