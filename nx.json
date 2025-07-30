@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "defaultBase": "origin/main",
+  "defaultBase": "shivspd",
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
@@ -57,6 +57,9 @@
     }
   ],
   "targetDefaults": {
+    "e2e-ci--**/*": {
+      "parallelism": false
+    },
     "build": {
       "cache": true
     },
@@ -68,6 +71,14 @@
     },
     "e2e-ci--**/**": {
       "dependsOn": ["^build"]
+    },
+    "start-api": {
+      "cache": true
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "generators": {

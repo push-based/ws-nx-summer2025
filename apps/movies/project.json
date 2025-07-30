@@ -4,14 +4,24 @@
   "sourceRoot": "apps/movies/src",
   "projectType": "application",
   "tags": ["scope:movies"],
-  "// targets": "to see all targets run: nx show project movies --web",
   "targets": {
+    "build": {
+        "inputs": [{ "env": "MY_SECRET"  }]
+    },
     "serve": {
-      "dependsOn": [{ "projects": ["movies-api"], "target": "serve" }]
+      "dependsOn": [
+        {
+          "projects": ["movies-api"],
+          "target": "serve"
+        }
+      ]
     },
     "deploy": {
+      "executor": "nx:run-commands",
       "dependsOn": ["build"],
-      "command": "docker build -f tools/deploy/deploy.Dockerfile --build-arg='APP_NAME=movies' . -t ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
+      "options": {
+        "command": "docker build -f apps/movies/deploy.Dockerfile --build-arg='APP_NAME=movies' . -t ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
+      }
     },
     "preview": {
       "dependsOn": ["movies-api:serve"]
