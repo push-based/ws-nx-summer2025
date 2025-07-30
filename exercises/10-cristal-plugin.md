@@ -205,7 +205,7 @@ function normalizeOptions(
 }
 
 export const createNodesV2: CreateNodesV2<Partial<DeployPluginOptions>> = [
-  '**/deploy.Dockerfile',
+  '**/Dockerfile',
   async (dockerFiles, options, context) => {
     try {
       return await createNodesFromFiles(
@@ -334,7 +334,7 @@ Move (or better copy) the existing files from `tools/deploy/` to the `apps/movie
 In the end you need to have:
 
 ```bash
-deploy.Dockerfile
+Dockerfile
 nginx.config
 ```
 
@@ -354,7 +354,7 @@ Remove the section that says `targets` in your `apps/movies/project.json` file.
     "deploy": {
       "executor": "@react-monorepo/workspace-tools:deploy",
       "options": {
-        "dockerFile": "tools/deploy/deploy.Dockerfile",
+        "dockerFile": "tools/deploy/Dockerfile",
         "tag": "ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
       }
     }
@@ -449,7 +449,7 @@ function normalizeOptions(
 }
 
 export const createNodesV2: CreateNodesV2<Partial<DeployPluginOptions>> = [
-  '**/deploy.Dockerfile',
+  '**/Dockerfile',
   async (dockerFiles, options, context) => {
     try {
       return await createNodesFromFiles(
