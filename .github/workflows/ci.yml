@@ -1,9 +1,8 @@
-
-name: CI
+name: Main CI
 on:
   push:
     branches:
-      - lego4150:main
+      - lego4150/main    # normally main
 
 jobs:
   main:
@@ -18,4 +17,4 @@ jobs:
           cache: 'npm'
 
       - run: npm ci
-      - run: npx nx affected -t lint build --base=HEAD^
+      - run: npx nx affected -t build lint --base=HEAD^    # normally wouldn't do HEAD
