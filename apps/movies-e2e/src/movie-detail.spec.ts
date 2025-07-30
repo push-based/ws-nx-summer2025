@@ -15,7 +15,6 @@ test.beforeEach(async ({ page }) => {
 test('loads movie details correctly', async ({ page }) => {
   // Navigate to the movie detail page
   page.goto('/movies/12477');
-
   // Wait for the movie details to be loaded
   page.waitForResponse(
     (response) =>
