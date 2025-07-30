@@ -24,7 +24,7 @@ describe('MovieCard', () => {
     );
 
     // Check if title is rendered
-    const titleElement = screen.getByText('Test Movies');
+    const titleElement = screen.getByText('asdfasdf');
     expect(titleElement).toBeInTheDocument();
 
     // Check if overview is rendered (truncated)
