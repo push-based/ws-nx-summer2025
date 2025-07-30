@@ -3,26 +3,5 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/movies/src",
   "projectType": "application",
-  "tags": ["scope:movies"],
-  "targets": {
-    "serve": {
-      "dependsOn": [
-        {
-          "projects": ["movies-api"],
-          "target": "serve"
-        }
-      ]
-    },
-    "deploy": {
-      "executor": "@react-monorepo/workspace-tools:deploy",
-      "dependsOn": ["build"],
-      "options": {
-        "dockerFile": "tools/deploy/deploy.Dockerfile",
-        "tag": "ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
-      }
-    },
-    "preview": {
-      "dependsOn": ["movies-api:serve"]
-    }
-  }
+  "tags": ["scope:movies"]
 }
