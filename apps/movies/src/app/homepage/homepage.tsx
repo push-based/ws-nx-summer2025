@@ -7,6 +7,8 @@ import { useFavorites, useMovies } from '@react-monorepo/movies-data-access';
 import { useSearchParams } from 'react-router-dom';
 import { searchMoviesByTitle } from '../utils/search-movies-by-title.util';
 
+// Home page component
+
 export default function Homepage() {
   const { user } = useContext(AuthContext);
   const [searchParams] = useSearchParams();
