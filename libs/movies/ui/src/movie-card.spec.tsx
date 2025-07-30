@@ -39,7 +39,7 @@ describe('MovieCard', () => {
       <MemoryRouter>
         <MovieCard
           movie={mockMovie}
-          isFavorite={false}
+          isFavorite={true}
           onFavoriteClick={() => void 0}
           showActions
         />
