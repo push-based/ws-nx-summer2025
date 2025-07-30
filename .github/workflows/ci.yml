@@ -3,7 +3,7 @@ name: Main CI Job
 on:
   push:
     branches:
-      - julian-branch # 👈️👈️👈️👈️👈️👈️👈️ IMPORTANT
+      - sterlingmccall-2 # 👈️👈️👈️👈️👈️👈️👈️ IMPORTANT
 
 
 jobs:
