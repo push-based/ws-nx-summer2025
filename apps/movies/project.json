@@ -4,7 +4,7 @@
   "sourceRoot": "apps/movies/src",
   "projectType": "application",
   "tags": ["scope:movies"],
-  "targets": {
+  "/// targets": {
     "serve": {
       "dependsOn": [
         {
@@ -16,6 +16,7 @@
     "deploy": {
       "executor": "@react-monorepo/workspace-tools:deploy",
       "dependsOn": ["build"],
+      "inputs": ["dockerFiles", {}],
       "options": {
         "dockerFile": "tools/deploy/deploy.Dockerfile",
         "tag": "ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev"
