@@ -57,6 +57,9 @@
     }
   ],
   "targetDefaults": {
+    "e2e-ci--**/*": {
+      "parallelism": false
+    },
     "build": {
       "cache": true
     },
