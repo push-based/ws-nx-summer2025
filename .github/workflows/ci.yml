@@ -2,7 +2,7 @@ name: Main CI
 on:
   push:
     branches:
-      - lego4150/main    # normally main
+      - lego4150:main    # normally main
 
 jobs:
   main:

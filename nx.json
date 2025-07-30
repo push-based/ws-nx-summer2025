@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "defaultBase": "lego4150/main",
+  "defaultBase": "lego4150:main",
   "namedInputs": {
     "default": [
       "{projectRoot}/**/*",
