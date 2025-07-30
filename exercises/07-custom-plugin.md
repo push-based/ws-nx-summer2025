@@ -2,7 +2,7 @@
 
 ---
 
-**[← Previous: Module Boundaries](./06-enforce-module-boundaries.md) | [Next: Custom Executors →](./08-custom-executor.md)**
+**[← Previous: Module Boundaries](./06-enforce-module-boundaries.md) | [Next: Custom Generator →](./09-custom-generator.md)**
 
 ---
 
@@ -60,6 +60,6 @@ Congratulations, you've successfully generated your first nx plugin ;)
 
 ---
 
-**[← Previous: Module Boundaries](./06-enforce-module-boundaries.md) | [Next: Custom Executors →](./08-custom-executor.md)**
+**[← Previous: Module Boundaries](./06-enforce-module-boundaries.md) | [Next: Custom Generator →](./09-custom-generator.md)**
 
 ---
