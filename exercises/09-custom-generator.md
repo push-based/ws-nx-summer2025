@@ -2,7 +2,7 @@
 
 ---
 
-**[← Previous: Custom Executors](./08-custom-executor.md) | [Next: Task Inheritance - Project Crystal →](./10-cristal-plugin.md)**
+**[← Previous: Custom Plugin](./07-custom-plugin.md) | [Next: Custom Executor →](./08-custom-executor.md)**
 
 ---
 
@@ -169,11 +169,11 @@ http {
 }
 ```
 
-### 2.4. Update the generator.ts file
+### 2.4. Update the add-dockerfile.ts file
 
-Inside the `generator.ts` file, we will write the needed logic to put the `Dockerfile` in the right place and add the `deploy` target to the project.
+Inside the `add-dockerfile.ts` file, we will write the needed logic to put the `Dockerfile` in the right place and add the `deploy` target to the project.
 
-Update the `generator.ts` file to look like this:
+Update the `add-dockerfile.ts` file to look like this:
 
 ```ts
 import {
@@ -453,6 +453,6 @@ EXPOSE 80
 
 ---
 
-**[← Previous: Custom Executors](./08-custom-executor.md) | [Next: Task Inheritance - Project Crystal →](./10-cristal-plugin.md)**
+**[← Previous: Custom Plugin](./07-custom-plugin.md) | [Next: Custom Executor →](./08-custom-executor.md)**
 
 ---

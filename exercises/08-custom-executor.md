@@ -2,7 +2,7 @@
 
 ---
 
-**[← Previous: Custom Plugins](./07-custom-plugin.md) | [Next: Custom Generator →](./09-custom-generator.md)**
+**[← Previous: Custom Generator](./09-custom-generator.md) | [Next: Task Inference - Crystal Plugin →](./10-cristal-plugin.md)**
 
 ---
 
@@ -375,6 +375,6 @@ You should see all the outputs from docker as before!
 
 ---
 
-**[← Previous: Custom Plugins](./07-custom-plugin.md) | [Next: Custom Generator →](./09-custom-generator.md)**
+**[← Previous: Custom Generator](./09-custom-generator.md) | [Next: Task Inference - Crystal Plugin →](./10-cristal-plugin.md)**
 
 ---
