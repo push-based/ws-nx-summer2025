@@ -5,6 +5,9 @@
   "projectType": "application",
   "tags": ["scope:movies"],
   "targets": {
+    "build": {
+        "inputs": [{ "env": "MY_SECRET"  }]
+    },
     "serve": {
       "dependsOn": [
         {
