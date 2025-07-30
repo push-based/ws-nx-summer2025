@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "AddDockerfile",
+  "title": "",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "The project where the dockerfile will be added.",
+      "x-prompt": "What name would you like to use?",
+      "x-dropdown": "projects"
+    }
+  },
+  "required": ["project"]
+}
