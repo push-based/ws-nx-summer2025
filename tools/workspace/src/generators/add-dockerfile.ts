@@ -35,10 +35,11 @@ export async function addDockerfileGenerator(
     targets: {
       ...selectedProject.targets,
       deploy: {
-        executor: 'nx:run-commands',
+        executor: '@react-monorepo/workspace-tools:deploy',
         dependsOn: ['build'],
         options: {
-          command: `docker build -f ${projectRoot}/deploy.Dockerfile --build-arg='APP_NAME=${selectedProject.name}' . -t ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev`,
+          dockerFile: `${projectRoot}/deploy.Dockerfile`,
+          tag: `ghcr.io/push-based/ws-nx-summer2025/ws-nx-summer2025:dev`,
         },
       },
     },
