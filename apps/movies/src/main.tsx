@@ -6,6 +6,7 @@ import { AuthProvider } from '@react-monorepo/shared-auth-data-access';
 import { MovieProvider } from '@react-monorepo/movies-data-access';
 
 const root = ReactDOM.createRoot(
+  // comment comment
   document.getElementById('root') as HTMLElement
 );
 root.render(
