@@ -16,6 +16,20 @@
 
 ## 🏋️‍♀️&nbsp;&nbsp;Steps:
 
+### 0. Make Sure You Can Run E2E Tests in CI
+
+Update your `.github/workflows/ci.yml` file to make sure that `playwright install` is being run and `e2e` is included in the `affected` command.
+
+```yaml
+      - run: npm ci
+      - run: npx playwright install --with-deps
+      - uses: nrwl/nx-set-shas@v4
+
+      # ...
+
+      - run: npx nx affected -t lint test build e2e
+```
+
 ### 1. Inspect whether Atomizer is already enabled
 
 Open the project detail view for our `movies-app-e2e` project. You should see multiple runnable targets per Playwright spec file. If that's the case then Atomizer is enabled for our Playwright e2e tests.
