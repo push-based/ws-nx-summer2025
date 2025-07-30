@@ -1,9 +1,9 @@
 {
-  "name": "shared-models",
+  "name": "utils",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/shared/models/src",
+  "sourceRoot": "libs/shared/utils/src",
   "projectType": "library",
   "tags": ["scope:shared", "type:util"],
-  "// targets": "to see all targets run: nx show project shared-models --web",
+  "// targets": "to see all targets run: nx show project utils --web",
   "targets": {}
 }

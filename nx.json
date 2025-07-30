@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "defaultBase": "origin/main",
+  "defaultBase": "origin/some-branch",
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
@@ -26,6 +26,7 @@
         "serveStaticTargetName": "serve-static"
       }
     },
+    
     {
       "plugin": "@nx/eslint/plugin",
       "options": {
@@ -68,6 +69,11 @@
     },
     "e2e-ci--**/**": {
       "dependsOn": ["^build"]
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "generators": {
