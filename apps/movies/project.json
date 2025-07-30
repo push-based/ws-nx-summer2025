@@ -6,7 +6,8 @@
   "tags": ["scope:movies"],
   "targets": {
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "inputs": [{ "env": "MY_SECRET" }]
     },
     "serve": {
       "dependsOn": [
