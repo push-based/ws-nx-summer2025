@@ -67,7 +67,8 @@
       "cache": true
     },
     "e2e-ci--**/**": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      ciTargetName: 
     }
   },
   "generators": {
