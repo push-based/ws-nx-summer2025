@@ -1,0 +1,22 @@
+
+name: CI
+on:
+  push:
+    branches:
+      - j-graham-nx-workshop
+
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 24
+          cache: 'npm'
+
+      - run: npm ci --legacy-peer-deps
+      - run: npx nx affected -t lint build --base=HEAD^
